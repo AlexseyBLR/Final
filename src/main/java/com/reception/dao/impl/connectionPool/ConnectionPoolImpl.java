@@ -1,13 +1,10 @@
-package com.reception.dao.connectionPool;
+package com.reception.dao.impl.connectionPool;
 
 
-import com.reception.dao.exception.CloseConnectionException;
 import com.reception.dao.exception.ConnectionPoolException;
 import com.reception.dao.exception.ConnectionPoolInitializationException;
-
 import org.apache.log4j.Logger;
 
-import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

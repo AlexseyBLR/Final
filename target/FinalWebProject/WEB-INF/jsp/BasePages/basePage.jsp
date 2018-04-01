@@ -7,6 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <style>
 
+        .navbar-inverse .navbar-nav > li > a {
+            color: white !important;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover,
+        .navbar-inverse .navbar-nav > li > a:focus {
+            color: #a09f9f !important;
+        }
+
+        body {
+            background-color: rgba(165, 163, 255, 0.15) !important;
+        }
+
         .faculty {
             font-family: 'Oswald', Serif;
             font-size: 20px;
@@ -15,7 +28,7 @@
         }
 
         .container-fluid {
-            background-image: linear-gradient(#4b4b4b, #242424);
+            background-image: linear-gradient(#313131, #4b4b4b);
         }
 
         .navbar-inverse {
@@ -72,13 +85,13 @@
         <div class="collapse navbar-collapse js-navbar">
             <ul class="nav navbar-nav">
 
-                <li class="dropdown-toggle"><a href="index.html">Главная</a></li>
+                <li class="dropdown-toggle"><a href="index.html">Main</a></li>
 
 
                 </li>
                 <li class="dropdown">
                     <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        факультеты
+                        Faculties
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -97,7 +110,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a id="language" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Язык
+                        Language
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: 10px">
@@ -108,27 +121,31 @@
                 </li>
                 <li class="dropdown">
                     <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        войти
+                        Sign In
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: 220px">
-                        <form method="get" action="/FrontController">
+                        <form method="get" action="/FrontControllerLogIn">
                             <input type="hidden" name="command" value="logination">
                             <div class="form-group">
                                 <label for="email" class="margin">Email</label>
                                 <input type="text" id="email" name="Username" class="form-control"
                                        style="width: auto; margin-left: 10px"
-                                       placeholder="Введите email">
+                                       placeholder="email"/>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="margin">Password</label>
                                 <input type="password" id="password" name="Username" class="form-control"
                                        style="width: auto; margin-left: 10px"
-                                       placeholder="Введите email">
+                                       placeholder="password">
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" style="margin-left: 10px" value="LogIn">
                             </div>
+                        </form>
+                        <form action="FrontController" method="get">
+                            <input type="hidden" name="command" value="goToRegistration">
+                            <input type="submit" class="btn btn-primary" style="margin-left: 55px" value="Registration"/>
                         </form>
                     </ul>
                 </li>

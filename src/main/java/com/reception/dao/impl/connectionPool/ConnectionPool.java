@@ -1,4 +1,4 @@
-package com.reception.dao.connectionPool;
+package com.reception.dao.impl.connectionPool;
 
 import com.reception.dao.exception.ConnectionPoolException;
 

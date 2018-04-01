@@ -1088,37 +1088,32 @@
     </column>
     <column id="262" parent="233" name="phone_number">
       <Position>6</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>varchar(17)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="233" name="birthday">
+    <column id="263" parent="233" name="Math_result">
       <Position>7</Position>
-      <DataType>date|0</DataType>
+      <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="233" name="Math_result">
+    <column id="264" parent="233" name="Phys_result">
       <Position>8</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="233" name="Phys_result">
+    <column id="265" parent="233" name="Lang_result">
       <Position>9</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="233" name="Lang_result">
+    <column id="266" parent="233" name="Sert_result">
       <Position>10</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="233" name="Sert_result">
+    <column id="267" parent="233" name="role">
       <Position>11</Position>
-      <DataType>varchar(45)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="268" parent="233" name="role">
-      <Position>12</Position>
       <DataType>enum(&apos;user&apos;, &apos;admin&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>

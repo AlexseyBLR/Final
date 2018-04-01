@@ -1,4 +1,4 @@
-package by.online.pharmacy.service.exception;
+package com.reception.service.exception;
 
 public class ServiceException extends Exception {
 

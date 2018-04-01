@@ -1,26 +1,23 @@
-package by.online.pharmacy.service.factory;
+package com.reception.service.factory;
 
-import by.online.pharmacy.service.CustomerService;
-import by.online.pharmacy.service.ProductService;
-import by.online.pharmacy.service.impl.CustomerServiceImpl;
-import by.online.pharmacy.service.impl.ProductServiceImpl;
+
+import com.reception.service.CustomerService;
+import com.reception.service.impl.UserServiceImpl;
 
 public class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final CustomerService customerService = new CustomerServiceImpl();
+    private final CustomerService customerService = new UserServiceImpl();
 
-    private final ProductService productService = new ProductServiceImpl();
 
-    private ServiceFactory() {}
+    private ServiceFactory() {
+    }
 
-    public CustomerService getCustomerService(){
+    public CustomerService getCustomerService() {
         return customerService;
     }
 
-
-    public ProductService getProductService(){return productService; }
 
     public static ServiceFactory getInstance() {
         return instance;

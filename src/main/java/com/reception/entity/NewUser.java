@@ -10,7 +10,6 @@ public class NewUser {
     private String email;
     private String password;
     private String phoneNumber;
-    private String birthday;
     private String mathResult;
     private String physResult;
     private String langResult;
@@ -18,7 +17,7 @@ public class NewUser {
     private static final String ROLE = "user";
 
     public NewUser(String first_name, String last_name, String patronymic, String email,
-                   String password, String phoneNumber, String birthday, String mathResult,
+                   String password, String phoneNumber, String mathResult,
                    String physResult, String langResult, String sertResult) {
 
         this.first_name = first_name;
@@ -27,13 +26,13 @@ public class NewUser {
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.birthday = birthday;
         this.mathResult = mathResult;
         this.physResult = physResult;
         this.langResult = langResult;
         this.sertResult = sertResult;
 
     }
+
 
 
     public String getFirst_name() {
@@ -84,14 +83,6 @@ public class NewUser {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
     public String getMathResult() {
         return mathResult;
     }
@@ -139,7 +130,6 @@ public class NewUser {
                 Objects.equals(email, newUser.email) &&
                 Objects.equals(password, newUser.password) &&
                 Objects.equals(phoneNumber, newUser.phoneNumber) &&
-                Objects.equals(birthday, newUser.birthday) &&
                 Objects.equals(mathResult, newUser.mathResult) &&
                 Objects.equals(physResult, newUser.physResult) &&
                 Objects.equals(langResult, newUser.langResult) &&
@@ -149,7 +139,7 @@ public class NewUser {
     @Override
     public int hashCode() {
 
-        return Objects.hash(first_name, last_name, patronymic, email, password, phoneNumber, birthday, mathResult, physResult, langResult, sertResult);
+        return Objects.hash(first_name, last_name, patronymic, email, password, phoneNumber, mathResult, physResult, langResult, sertResult);
     }
 
     @Override
@@ -161,7 +151,6 @@ public class NewUser {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", birthday='" + birthday + '\'' +
                 ", mathResult='" + mathResult + '\'' +
                 ", physResult='" + physResult + '\'' +
                 ", langResult='" + langResult + '\'' +

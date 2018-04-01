@@ -1,11 +1,10 @@
-package com.reception.dao.connectionPool;
+package com.reception.dao.impl.connectionPool;
 
 
 import com.reception.dao.exception.CloseConnectionException;
 import com.reception.dao.exception.ConnectionPoolException;
 
 import java.io.Closeable;
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;

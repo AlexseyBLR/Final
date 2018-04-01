@@ -12,9 +12,9 @@ public final class CommandProvider {
     private CommandProvider(){
         commandMap.put("language", new LocalCommand());
         commandMap.put("logination", new LoginationPageCommand());
-        commandMap.put("facultyPage", new FacultyPageCommand());
+        commandMap.put("goToRegistration", new GoToRegistrationCommand());
         commandMap.put("resultPage", new ResultPageCommand());
-//        commandMap.put("registrationPage", new RegistrationPageCommand());
+        commandMap.put("registration", new RegistrationPageCommand());
         commandMap.put("adminAddRequestPage", new AdminAddRequestPageCommand());
         commandMap.put("adminSendResultPage", new AdminSendResultPageCommand());
         commandMap.put("userSelectPage", new UserSelectPageCommand());

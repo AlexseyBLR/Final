@@ -1,4 +1,4 @@
-package com.reception.dao.connectionPool;
+package com.reception.dao.impl.connectionPool;
 
 public enum JDBCProperty {
       DB_DRIVER_NAME,
