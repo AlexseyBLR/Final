@@ -15,7 +15,7 @@ public interface UserDAO {
 
     NewUser get(String email) throws DAOException;
 
-    List<NewUser> getAll() throws DAOException;
+    List<NewUser> getAllUsers() throws DAOException;
 
     void update(NewUser user) throws DAOException;
 }

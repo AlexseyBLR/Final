@@ -17,17 +17,130 @@
 
     <servlet-mapping>
         <servlet-name>FrontController</servlet-name>
-        <url-pattern>/FrontControllerLogIn</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>FrontController</servlet-name>
         <url-pattern>/frontControllerLogIn</url-pattern>
     </servlet-mapping>
+
+
     <servlet-mapping>
         <servlet-name>FrontController</servlet-name>
         <url-pattern>/frontControllerReg</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FrontControllerMain</servlet-name>
+        <jsp-file>/WEB-INF/jsp/User/UserMain.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerMain</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerBP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/BasePages/basePage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerBP</servlet-name>
+        <url-pattern>/basePage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerRequest</servlet-name>
+        <jsp-file>/WEB-INF/jsp/User/Request.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerRequest</servlet-name>
+        <url-pattern>/request</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerResult</servlet-name>
+        <jsp-file>/WEB-INF/jsp/User/Result.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerResult</servlet-name>
+        <url-pattern>/result</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerUserMain</servlet-name>
+        <jsp-file>/WEB-INF/jsp/User/UserMain.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerUserMain</servlet-name>
+        <url-pattern>/userMain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerUserRequest</servlet-name>
+        <jsp-file>/WEB-INF/jsp/User/Request.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerUserRequest</servlet-name>
+        <url-pattern>/userReq</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerAdminMain</servlet-name>
+        <jsp-file>/WEB-INF/jsp/Admin/AdminMain.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerAdminMain</servlet-name>
+        <url-pattern>/adminMain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerAdminResult</servlet-name>
+        <jsp-file>/WEB-INF/jsp/Admin/ResultPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerAdminResult</servlet-name>
+        <url-pattern>/adminResult</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerAdminRequests</servlet-name>
+        <jsp-file>/WEB-INF/jsp/Admin/RequestPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerAdminRequests</servlet-name>
+        <url-pattern>/adminRequests</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerError</servlet-name>
+        <jsp-file>/WEB-INF/jsp/BasePages/errorPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerError</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrontControllerGetUsers</servlet-name>
+        <jsp-file>/WEB-INF/jsp/Admin/Users.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerGetUsers</servlet-name>
+        <url-pattern>/showUsers</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
 
 
 </web-app>

@@ -1,6 +1,25 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page isELIgnored="false" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="language"
+       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale.language}"
+       scope="session"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="local" />
+
 <!DOCTYPE html>
 <html>
 <head>
+
+    <script src="/js/validator.js" type="text/javascript"></script>
+
+    <c:set var="language"
+           value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale.language}"
+           scope="session"/>
+    <fmt:setLocale value="${language}"/>
+    <fmt:setBundle basename="local" />
+
     <meta charset="utf-8">
     <title>Bootstrap уроки</title>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
@@ -76,30 +95,30 @@
 <body>
 
 
+
 <form class="navbar navbar-inverse ">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" style="font-size: 30px; margin-right: 50px; margin-left: 1px"
-               href="index.jsp">UNIVERSITY</a>
+            <a class="navbar-brand" style="font-size: 30px; margin-right: 50px; margin-left: 1px"href="index.jsp">UNIVERSITY</a>
         </div>
         <div class="collapse navbar-collapse js-navbar">
             <ul class="nav navbar-nav">
 
-                <li class="dropdown-toggle"><a href="index.html">Main</a></li>
+                <li class="dropdown-toggle"><a href="index.jsp"><fmt:message key="local.message"/> </a></li>
 
 
                 </li>
                 <li class="dropdown">
                     <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Faculties
+                        <fmt:message key="local.faculties"/>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
 
                         <!--ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-                        <li><a href="#" class="faculty">Mechanical</a></li>
-                        <li><a href="#" class="faculty">Architecture</a></li>
-                        <li><a href="#" class="faculty">Computer science</a></li>
+                        <li><a href="#" class="faculty"><fmt:message key="local.faculties.mechanical"/></a></li>
+                        <li><a href="#" class="faculty"><fmt:message key="local.faculriest.architecture"/></a></li>
+                        <li><a href="#" class="faculty"><fmt:message key="local.faculties.comScience"/></a></li>
                     </ul>
                 </li>
 
@@ -110,42 +129,48 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a id="language" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Language
+                        <fmt:message key="local.language"/>
                         <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" style="width: 10px">
-                        <li><input type="submit" class="btn btn-primary" style="margin: 10px" value="Ru"></li>
-                        <li><input type="submit" class="btn btn-primary" style="margin: 10px" value="En"></li>
+                    <form method="get" action="/FrontControllerLanguage">
+                        <input type="hidden" name="command" value="selectLanguage">
+                        <ul class="dropdown-menu" style="width: 10px">
 
-                    </ul>
+                            <a style="margin-right: 30px;margin-left: 20px; font-size: 20px" class="dropdown-item" href="${requestScope.requestURI}?language=en"><fmt:message key="local.en"/></a>
+                            <a style="font-size: 20px" class="dropdown-item" href="${requestScope.requestURI}?language=ru"><fmt:message key="local.ru"/></a>
+
+                        </ul>
+                    </form>
                 </li>
                 <li class="dropdown">
                     <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Sign In
+                        <fmt:message key="local.signin"/>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: 220px">
-                        <form method="get" action="/FrontControllerLogIn">
+                        <form onclick="return validateForm()" method="get" action="FrontController" role="form" name="registration_form">
                             <input type="hidden" name="command" value="logination">
                             <div class="form-group">
                                 <label for="email" class="margin">Email</label>
-                                <input type="text" id="email" name="Username" class="form-control"
+                                <input type="text" id="email" autofocus name="email" class="form-control"
                                        style="width: auto; margin-left: 10px"
                                        placeholder="email"/>
+                                <p id="email_error" style="color: red"></p>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="margin">Password</label>
-                                <input type="password" id="password" name="Username" class="form-control"
+                                <label for="password" class="margin"><fmt:message key="local.password"/></label>
+                                <input type="password" id="password" autofocus name="password" class="form-control"
                                        style="width: auto; margin-left: 10px"
                                        placeholder="password">
+                                <p id="password_error" style="color: red"></p>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" style="margin-left: 10px" value="LogIn">
+                                <input type="submit" class="btn btn-primary" style="margin-left: 10px" value=<fmt:message key="local.button.login"/>>
                             </div>
                         </form>
                         <form action="FrontController" method="get">
                             <input type="hidden" name="command" value="goToRegistration">
-                            <input type="submit" class="btn btn-primary" style="margin-left: 55px" value="Registration"/>
+                            <input type="submit" class="btn btn-primary" style="margin-left: 55px" value=<fmt:message key="local.button.registration"/> >
                         </form>
                     </ul>
                 </li>
@@ -156,5 +181,49 @@
     </div>
 
 </form>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-left:150px; width: 1300px">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="one.jpg">
+            <div class="carousel-caption d-none d-md-block">
+                <h5><fmt:message key="local.message.slider.small"/></h5>
+                <h1><fmt:message key="local.message.slider.BIG"/></h1>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="two.jpg">
+            <div class="carousel-caption d-none d-md-block">
+                <h5><fmt:message key="local.message.slider.secondsm"/></h5>
+                <h1><fmt:message key="local.message.slider.secondBig"/></h1>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="three.jpg">
+            <div class="carousel-caption d-none d-md-block">
+                <h5><fmt:message key="local.message.slider.thirdS"/></h5>
+                <h1><fmt:message key="local.message.slider.third.big"/></h1>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
 </body>
 </html>

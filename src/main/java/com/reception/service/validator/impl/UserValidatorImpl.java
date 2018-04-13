@@ -18,23 +18,15 @@ import java.util.regex.Pattern;
 
 public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<NewUser> {
 
-    private static final String EMAIL_REG_EXP = "([a-zA-Z0-9]+)(@)([a-zA-Z]+)(\\.)([a-zA-Z]){2,3}";
+    private static final String EMAIL_REG_EXP = "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
 
-    private static final String PHONE_NUMBER_REG_EXP = "\\+375-(25|29|44|33)-[1-9][0-9]{2}-[0-9]{2}-[0-9]{2}";
+    private static final String PHONE_NUMBER_REG_EXP = "\\+[1-9]{1}[0-9]{11}";
 
-    private static final String NAME_REG_EXP = "([a-zA-Z]+)";
+    private static final String NAME_REG_EXP = "[A-Z]{1}[a-z]+";
 
-    private static final String RESULT_REG_EXP = "^\\d{1,2}|100$";
+    private static final String RESULT_REG_EXP = "^\\d{1,2}|[100]$";
 
 
-
-//    private static final String EMAIL_REG_EXP = ".";
-//
-//    private static final String PHONE_NUMBER_REG_EXP = ".";
-//
-//    private static final String NAME_REG_EXP = ".";
-//
-//    private static final String RESULT_REG_EXP = ".";
 
     private static final Pattern PHONE_NUMBER_PATTERN = Pattern.compile(PHONE_NUMBER_REG_EXP);
 
@@ -58,7 +50,7 @@ public class UserValidatorImpl extends AbstractValidator implements CustomerVali
         dispathcer.put(Constant.RegistrationProperty.MATH_RESULT_PARAMETER, checkMathResult());
         dispathcer.put(Constant.RegistrationProperty.PHYS_RESULT_PARAMETER, checkPhysResult());
         dispathcer.put(Constant.RegistrationProperty.LANG_RESULT_PARAMETER, checkLangResult());
-        dispathcer.put(Constant.RegistrationProperty.SERT_RESULT_PARAMETER, checkSerthResult());
+        dispathcer.put(Constant.RegistrationProperty.SERT_RESULT_PARAMETER, checkSertResult());
 
     }
 
@@ -69,6 +61,7 @@ public class UserValidatorImpl extends AbstractValidator implements CustomerVali
         dispathcer.forEach((key, value) -> {
             if (!dispathcer.get(key).test(user)) {
                 result.set(false);
+                return;
             }
         });
         return result.get();
@@ -85,33 +78,33 @@ public class UserValidatorImpl extends AbstractValidator implements CustomerVali
     }
 
     private Predicate<NewUser> checkMathResult() {
-        return (user) -> !this.isEmptyOrNull(user.getMathResult())
+        return (user) -> !this.isEmptyOrNull(String.valueOf(user.getMathResult()))
                 &&
-                this.matchesPattern(RESULT_PATTER, user.getMathResult());
+                this.matchesPattern(RESULT_PATTER, String.valueOf(user.getMathResult()));
     }
 
     private Predicate<NewUser> checkPhysResult() {
-        return (user) -> !this.isEmptyOrNull(user.getPhysResult())
+        return (user) -> !this.isEmptyOrNull(String.valueOf(user.getPhysResult()))
                 &&
-                this.matchesPattern(RESULT_PATTER, user.getPhysResult());
+                this.matchesPattern(RESULT_PATTER, String.valueOf(user.getPhysResult()));
     }
 
     private Predicate<NewUser> checkLangResult() {
-        return (user) -> !this.isEmptyOrNull(user.getLangResult())
+        return (user) -> !this.isEmptyOrNull(String.valueOf(user.getLangResult()))
                 &&
-                this.matchesPattern(RESULT_PATTER, user.getLangResult());
+                this.matchesPattern(RESULT_PATTER, String.valueOf(user.getLangResult()));
     }
 
-    private Predicate<NewUser> checkSerthResult() {
-        return (user) -> !this.isEmptyOrNull(user.getSertResult())
+    private Predicate<NewUser> checkSertResult() {
+        return (user) -> !this.isEmptyOrNull(String.valueOf(user.getSertResult()))
                 &&
-                this.matchesPattern(RESULT_PATTER, user.getSertResult());
+                this.matchesPattern(RESULT_PATTER, String.valueOf(user.getSertResult()));
     }
 
     private Predicate<NewUser> checkPatronymicResult() {
         return (user) -> !this.isEmptyOrNull(user.getPatronymic())
                 &&
-                this.matchesPattern(RESULT_PATTER, user.getPatronymic());
+                this.matchesPattern(NAME_PATTER, user.getPatronymic());
     }
 
 

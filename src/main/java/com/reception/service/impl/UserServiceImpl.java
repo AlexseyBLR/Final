@@ -21,42 +21,38 @@ public class UserServiceImpl implements CustomerService {
     private final static Logger logger = Logger.getLogger(UserServiceImpl.class);
 
     private final CustomerValidator validator = new UserValidatorImpl();
-//    private final HashGenerator hashGenerator = new HashGenerator();
-
 
     @Override
     public boolean saveCustomer(NewUser user) throws ServiceException {
-
+        if (!validator.validate(user)) {
+            throw new ValidatorException("attempt to save a incorrect customer");
+        }
         try {
-
-            if(!validator.validate(user)){
-                throw new ValidatorException("attempt to save a incorrect customer");
-            }
             return customerDAO.save(user);
         } catch (DAOException e) {
-            throw new ServiceException("exception from saveCustomer method",e);
+            throw new ServiceException("exception from saveCustomer method", e);
         }
     }
 
     @Override
-    public NewUser findCustomerByEmailAndPassword(String email, String password) throws ServiceException {
+    public NewUser findUserByEmailAndPassword(String email, String password) throws ServiceException {
         try {
-            NewUser user = null;
-            if(!validator.loginValidate(email,password)){
+            if (!validator.loginValidate(email, password)) {
                 throw new ValidatorException("Invalid login date");
             }
-            return customerDAO.findCustomerByEmailAndPw(email,password);
+            return customerDAO.findCustomerByEmailAndPw(email, password);
         } catch (DAOException e) {
-            throw new ServiceException("exception from findCustomerByEmailAndPassword method",e);
+            throw new ServiceException("exception from findUserByEmailAndPassword method", e);
         }
     }
 
     @Override
-    public List<NewUser> getAllCustomers() throws ServiceException {
+    public List<NewUser> getAllUsers() throws ServiceException {
         try {
-            return customerDAO.getAll();
+            List<NewUser> list = customerDAO.getAllUsers();
+            return list;
         } catch (DAOException e) {
-            throw new ServiceException("exception from getAllCustomers method",e);
+            throw new ServiceException("exception from getAllUsers method", e);
         }
     }
 
@@ -65,7 +61,6 @@ public class UserServiceImpl implements CustomerService {
 //        return this.hashGenerator.generateHashPassword(pw);
         return null;
     }
-
 
 
 }

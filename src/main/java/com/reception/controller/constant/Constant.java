@@ -15,4 +15,34 @@ public class Constant {
         public final static String SERT_RESULT_PARAMETER = "sertResult";
 
     }
+
+    public static class  WebProperty {
+
+        public final static String PAGE_CUSTOMER = "/account";
+        public final static String PAGE_ADMIN = "/admin/account";
+        public final static String PAGE_ERROR = "/error";
+        public final static String PAGE_CUSTOMER_LIST = "/admin/customers";
+        public final static String PAGE_REGISTRATION = "/registration";
+        public final static String PAGE_PRODUCT_SETTING = "/admin/product/setting?id=";
+        public final static String PAGE_MAIN = "/home";
+        public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
+        public final static String PAGE_LOGIN = "/login";
+        public final static String PAGE_PRODUCT = "/product";
+    }
+
+    public static class RequestProperty {
+
+        public static final String ARCHITECTURE_BUILDING_FACULTY = "Faculty: ARCHITECTURE, speciality: BUILDING";
+        public static final String ARCHITECTURE_DESIGN_FACULTY = "Faculty: ARCHITECTURE, speciality: DESIGN";
+        public static final String MECHANICAL_EXPLOATATION_FACULTY = "Faculty: MECHANICAL, speciality: EXPLOATATION";
+        public static final String MECHANICAL_REPAIR_FACULTY = "Faculty: MECHANICAL, speciality: REPAIR";
+    }
+
+    public static class ResultProperty {
+
+        public static final String ARCHITECTURE_BUILDING_FACULTY = "'Faculty: ARCHITECTURE, speciality: BUILDING'";
+        public static final String ARCHITECTURE_DESIGN_FACULTY = "'Faculty: ARCHITECTURE, speciality: DESIGN'";
+        public static final String MECHANICAL_EXPLOATATION_FACULTY = "'Faculty: MECHANICAL, speciality: EXPLOATATION'";
+        public static final String MECHANICAL_REPAIR_FACULTY = "'Faculty: MECHANICAL, speciality: REPAIR'";
+    }
 }

@@ -5,6 +5,7 @@ import com.reception.dao.exception.CloseConnectionException;
 import com.reception.dao.exception.ConnectionPoolException;
 
 import java.io.Closeable;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;

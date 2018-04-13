@@ -10,15 +10,15 @@ public class NewUser {
     private String email;
     private String password;
     private String phoneNumber;
-    private String mathResult;
-    private String physResult;
-    private String langResult;
-    private String sertResult;
-    private static final String ROLE = "user";
+    private int mathResult;
+    private int physResult;
+    private int langResult;
+    private int sertResult;
+    private String role;
 
     public NewUser(String first_name, String last_name, String patronymic, String email,
-                   String password, String phoneNumber, String mathResult,
-                   String physResult, String langResult, String sertResult) {
+                   String password, String phoneNumber, int mathResult,
+                   int physResult, int langResult, int sertResult, String role) {
 
         this.first_name = first_name;
         this.last_name = last_name;
@@ -30,10 +30,18 @@ public class NewUser {
         this.physResult = physResult;
         this.langResult = langResult;
         this.sertResult = sertResult;
+        this.role = role;
 
     }
 
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getFirst_name() {
         return first_name;
@@ -83,41 +91,39 @@ public class NewUser {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getMathResult() {
+    public int getMathResult() {
         return mathResult;
     }
 
-    public void setMathResult(String mathResult) {
+    public void setMathResult(int mathResult) {
         this.mathResult = mathResult;
     }
 
-    public String getPhysResult() {
+    public int getPhysResult() {
         return physResult;
     }
 
-    public void setPhysResult(String physResult) {
+    public void setPhysResult(int physResult) {
         this.physResult = physResult;
     }
 
-    public String getLangResult() {
+    public int getLangResult() {
         return langResult;
     }
 
-    public void setLangResult(String langResult) {
+    public void setLangResult(int langResult) {
         this.langResult = langResult;
     }
 
-    public String getSertResult() {
+    public int getSertResult() {
         return sertResult;
     }
 
-    public void setSertResult(String sertResult) {
+    public void setSertResult(int sertResult) {
         this.sertResult = sertResult;
     }
 
-    public static String getROLE() {
-        return ROLE;
-    }
+
 
     @Override
     public boolean equals(Object o) {

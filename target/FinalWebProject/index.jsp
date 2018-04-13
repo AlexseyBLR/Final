@@ -9,10 +9,9 @@
 
     <title>JSP/JSTL i18n demo</title>
 
+
 </head>
 <body>
-
-
 <jsp:include page="WEB-INF/jsp/BasePages/basePage.jsp"></jsp:include>
 
 </body>

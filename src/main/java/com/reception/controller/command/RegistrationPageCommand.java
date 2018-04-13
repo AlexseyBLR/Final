@@ -25,10 +25,10 @@ public class RegistrationPageCommand implements Command {
     public final static String PASSWORD_PARAMETER = "password";
     public final static String EMAIL_PARAMETER = "email";
     public final static String PHONE_PARAMETER = "phone";
-    public final static String MATH_RESULT_PARAMETER = "mathResult";
-    public final static String PHYS_RESULT_PARAMETER = "physResult";
-    public final static String LANG_RESULT_PARAMETER = "langResult";
-    public final static String SERT_RESULT_PARAMETER = "sertResult";
+    public final static String MATH_RESULT_PARAMETER = "math";
+    public final static String PHYS_RESULT_PARAMETER = "phys";
+    public final static String LANG_RESULT_PARAMETER = "lang";
+    public final static String SERT_RESULT_PARAMETER = "sert";
 
 
     @Override
@@ -40,19 +40,19 @@ public class RegistrationPageCommand implements Command {
             String email = request.getParameter(EMAIL_PARAMETER);
             String password = request.getParameter(PASSWORD_PARAMETER);
             String phoneNumber = request.getParameter(PHONE_PARAMETER);
-            String mathResult = request.getParameter(MATH_RESULT_PARAMETER);
-            String physResult = request.getParameter(PHYS_RESULT_PARAMETER);
-            String langResult = request.getParameter(LANG_RESULT_PARAMETER);
-            String sertResult = request.getParameter(SERT_RESULT_PARAMETER);
+            int mathResult = Integer.parseInt(request.getParameter(MATH_RESULT_PARAMETER));
+            int physResult = Integer.parseInt(request.getParameter(PHYS_RESULT_PARAMETER));
+            int langResult = Integer.parseInt(request.getParameter(LANG_RESULT_PARAMETER));
+            int sertResult = Integer.parseInt(request.getParameter(SERT_RESULT_PARAMETER));
+            String role = "user";
 
             NewUser newUser = new NewUser(firstName, lastName, patronymic, email, password,
-                    phoneNumber, mathResult, physResult, langResult, sertResult);
+                    phoneNumber, mathResult, physResult, langResult, sertResult, role);
 
             boolean result = service.saveCustomer(newUser);
 
             if(result==true){
-                RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-                dispatcher.forward(request, response);
+                response.sendRedirect("/index.jsp");
             }else {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/RegistrationPage.jsp");
                 dispatcher.forward(request, response);
