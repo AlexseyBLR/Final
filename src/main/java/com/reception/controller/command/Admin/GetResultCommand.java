@@ -1,15 +1,12 @@
 package com.reception.controller.command.Admin;
 
 import com.reception.controller.command.Command;
-import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
-import com.reception.entity.ResultForRequest;
+import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
-import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -27,16 +24,16 @@ public class ShowResultCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
 
-        List<ResultForRequest> listME = resultService.getResult(ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
+        List<UserRequest> listME = resultService.getResult(ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
         request.getSession().setAttribute("resultME", listME);
 
-        List<ResultForRequest> listMR = resultService.getResult(ResultProperty.MECHANICAL_REPAIR_FACULTY);
+        List<UserRequest> listMR = resultService.getResult(ResultProperty.MECHANICAL_REPAIR_FACULTY);
         request.getSession().setAttribute("resultMR", listMR);
 
-        List<ResultForRequest> listAD = resultService.getResult(ResultProperty.ARCHITECTURE_DESIGN_FACULTY);
+        List<UserRequest> listAD = resultService.getResult(ResultProperty.ARCHITECTURE_DESIGN_FACULTY);
         request.getSession().setAttribute("resultAD", listAD);
 
-        List<ResultForRequest> listAB = resultService.getResult(ResultProperty.ARCHITECTURE_BUILDING_FACULTY);
+        List<UserRequest> listAB = resultService.getResult(ResultProperty.ARCHITECTURE_BUILDING_FACULTY);
         request.getSession().setAttribute("resultAB", listAB);
 
 

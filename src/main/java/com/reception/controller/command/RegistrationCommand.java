@@ -1,7 +1,7 @@
 package com.reception.controller.command;
 
-import com.reception.entity.NewUser;
-import com.reception.service.CustomerService;
+import com.reception.entity.User;
+import com.reception.service.UserService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
@@ -16,7 +16,7 @@ public class RegistrationPageCommand implements Command {
 
     private final static Logger logger = Logger.getLogger(RegistrationPageCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
-    private CustomerService service = factory.getCustomerService();
+    private UserService service = factory.getUserService();
 
 
     public final static String FIRST_NAME_PARAMETER = "firstName";
@@ -46,15 +46,15 @@ public class RegistrationPageCommand implements Command {
             int sertResult = Integer.parseInt(request.getParameter(SERT_RESULT_PARAMETER));
             String role = "user";
 
-            NewUser newUser = new NewUser(firstName, lastName, patronymic, email, password,
+            User user = new User(firstName, lastName, patronymic, email, password,
                     phoneNumber, mathResult, physResult, langResult, sertResult, role);
 
-            boolean result = service.saveCustomer(newUser);
+            boolean result = service.saveCustomer(user);
 
             if(result==true){
                 response.sendRedirect("/index.jsp");
             }else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/RegistrationPage.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
                 dispatcher.forward(request, response);
             }
 

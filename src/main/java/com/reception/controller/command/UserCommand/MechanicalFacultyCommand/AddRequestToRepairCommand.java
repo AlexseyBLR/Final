@@ -1,9 +1,9 @@
-package com.reception.controller.command.UserCommand.ArchitectureFcultyCommand;
+package com.reception.controller.command.UserCommand.MechanicalFacultyCommand;
 
 import com.reception.controller.command.Command;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
-import com.reception.entity.ResultForRequest;
+import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
@@ -17,15 +17,15 @@ import java.io.IOException;
 
 import static com.reception.controller.constant.Constant.RequestProperty;
 
-public class ArchDesignCommand implements Command{
+public class MechRepairCommand implements Command {
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
     private final ResultService resultService = factory.getResultService();
-    private final static Logger logger = Logger.getLogger(ArchDesignCommand.class);
+    private final static Logger logger = Logger.getLogger(MechRepairCommand.class);
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
     @Override
@@ -40,7 +40,7 @@ public class ArchDesignCommand implements Command{
         int sertResult = Integer.parseInt(String.valueOf(session.getAttribute("sertResult")));
 
 
-        ResultForRequest resultForRequest = new ResultForRequest(userFIO, mathResult, physResult, langResult, sertResult, RequestProperty.ARCHITECTURE_DESIGN_FACULTY);
+        UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, RequestProperty.MECHANICAL_REPAIR_FACULTY);
 
         boolean result = resultService.saveResult(resultForRequest);
         if (result) {
@@ -57,4 +57,3 @@ public class ArchDesignCommand implements Command{
 
 
 }
-

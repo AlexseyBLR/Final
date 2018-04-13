@@ -3,7 +3,7 @@ package com.reception.controller.command.Admin;
 import com.reception.controller.command.Command;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
-import com.reception.entity.ResultForRequest;
+import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
@@ -26,7 +26,7 @@ public class UsersRequestCommand implements Command {
 
 
         try {
-            List<ResultForRequest> list = resultService.getAllUsers();
+            List<UserRequest> list = resultService.getAllUsers();
             request.getSession().setAttribute("requests", list);
 
             response.sendRedirect("/adminRequests");
