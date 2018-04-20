@@ -19,11 +19,11 @@ public class Constant {
     public static class  WebProperty {
 
         public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/admin/account";
+        public final static String PAGE_ADMIN = "/Admin/account";
         public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/admin/customers";
+        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
         public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/admin/product/setting?id=";
+        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
         public final static String PAGE_MAIN = "/home";
         public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
         public final static String PAGE_LOGIN = "/login";

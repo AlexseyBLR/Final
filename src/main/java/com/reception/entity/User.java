@@ -2,7 +2,7 @@ package com.reception.entity;
 
 import java.util.Objects;
 
-public class NewUser {
+public class User {
 
     private String first_name;
     private String last_name;
@@ -16,9 +16,9 @@ public class NewUser {
     private int sertResult;
     private String role;
 
-    public NewUser(String first_name, String last_name, String patronymic, String email,
-                   String password, String phoneNumber, int mathResult,
-                   int physResult, int langResult, int sertResult, String role) {
+    public User(String first_name, String last_name, String patronymic, String email,
+                String password, String phoneNumber, int mathResult,
+                int physResult, int langResult, int sertResult, String role) {
 
         this.first_name = first_name;
         this.last_name = last_name;
@@ -129,17 +129,17 @@ public class NewUser {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NewUser newUser = (NewUser) o;
-        return Objects.equals(first_name, newUser.first_name) &&
-                Objects.equals(last_name, newUser.last_name) &&
-                Objects.equals(patronymic, newUser.patronymic) &&
-                Objects.equals(email, newUser.email) &&
-                Objects.equals(password, newUser.password) &&
-                Objects.equals(phoneNumber, newUser.phoneNumber) &&
-                Objects.equals(mathResult, newUser.mathResult) &&
-                Objects.equals(physResult, newUser.physResult) &&
-                Objects.equals(langResult, newUser.langResult) &&
-                Objects.equals(sertResult, newUser.sertResult);
+        User user = (User) o;
+        return Objects.equals(first_name, user.first_name) &&
+                Objects.equals(last_name, user.last_name) &&
+                Objects.equals(patronymic, user.patronymic) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(phoneNumber, user.phoneNumber) &&
+                Objects.equals(mathResult, user.mathResult) &&
+                Objects.equals(physResult, user.physResult) &&
+                Objects.equals(langResult, user.langResult) &&
+                Objects.equals(sertResult, user.sertResult);
     }
 
     @Override
@@ -150,7 +150,7 @@ public class NewUser {
 
     @Override
     public String toString() {
-        return "NewUser{" +
+        return "User{" +
                 "first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", patronymic='" + patronymic + '\'' +

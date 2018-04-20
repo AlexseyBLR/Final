@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class RegistrationPageCommand implements Command {
+public class RegistrationCommand implements Command {
 
-    private final static Logger logger = Logger.getLogger(RegistrationPageCommand.class);
+    private final static Logger logger = Logger.getLogger(RegistrationCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
     private UserService service = factory.getUserService();
 
@@ -32,7 +32,7 @@ public class RegistrationPageCommand implements Command {
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             String firstName = request.getParameter(FIRST_NAME_PARAMETER);
             String lastName = request.getParameter(LAST_NAME_PARAMETER);
@@ -54,8 +54,7 @@ public class RegistrationPageCommand implements Command {
             if(result==true){
                 response.sendRedirect("/index.jsp");
             }else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
-                dispatcher.forward(request, response);
+                response.sendRedirect("/registration");
             }
 
         }catch (ServiceException | IOException | RuntimeException e) {

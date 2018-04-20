@@ -7,7 +7,7 @@
 <html>
 <head>
 
-    <title>JSP/JSTL i18n demo</title>
+    <title>UNIVERSITY</title>
 
 
 </head>

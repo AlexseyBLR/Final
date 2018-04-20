@@ -3,11 +3,10 @@ package com.reception.service.impl;
 import com.reception.dao.ResultDAO;
 import com.reception.dao.exception.DAOException;
 import com.reception.dao.factory.DAOFactory;
-import com.reception.entity.ResultForRequest;
+import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ResultServiceImpl implements ResultService {
@@ -18,9 +17,9 @@ public class ResultServiceImpl implements ResultService {
 
 
     @Override
-    public List<ResultForRequest> getAllUsers() {
+    public List<UserRequest> getAllUsers() {
         try {
-            List<ResultForRequest> lists = resultDAO.getAll();
+            List<UserRequest> lists = resultDAO.getAll();
             return lists;
         } catch (DAOException e) {
             logger.error("Can't get result", e);
@@ -29,9 +28,9 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
-    public List<ResultForRequest> getResult(String facultySpeciality) {
+    public List<UserRequest> getResult(String facultySpeciality) {
         try {
-            List<ResultForRequest> lists = resultDAO.getEnlistedUsers(facultySpeciality);
+            List<UserRequest> lists = resultDAO.getEnlistedUsers(facultySpeciality);
             return lists;
         } catch (DAOException e) {
             logger.error("Can't get result", e);
@@ -40,10 +39,10 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
-    public boolean updateUsers(ResultForRequest resultForRequest) {
+    public boolean updateUsers(UserRequest request) {
         try {
 
-            resultDAO.updateUsers(resultForRequest);
+            resultDAO.updateUsers(request);
             return true;
         } catch (DAOException e) {
             logger.error("Can't save result", e);
@@ -52,9 +51,9 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
-    public boolean saveResult(ResultForRequest resultForRequest) {
+    public boolean saveResult(UserRequest request) {
         try {
-            return resultDAO.addResult(resultForRequest);
+            return resultDAO.addResult(request);
         } catch (DAOException e) {
             logger.error("Can't save result", e);
         }

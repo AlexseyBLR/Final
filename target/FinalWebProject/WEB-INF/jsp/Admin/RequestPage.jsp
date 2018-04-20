@@ -10,7 +10,7 @@
 <fmt:setBundle basename="admin" />
 <html>
 <head>
-    <title>Title</title>
+    <title>Requests</title>
     <style>
 
         .thead-default{

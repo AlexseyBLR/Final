@@ -1,14 +1,15 @@
 package com.reception.controller.command;
 
 import com.reception.controller.command.Admin.ApprovedRequestsCommand;
-import com.reception.controller.command.Admin.ShowResultCommand;
-import com.reception.controller.command.Admin.ShowUsersCommand;
-import com.reception.controller.command.Admin.UsersRequestCommand;
-import com.reception.controller.command.UserCommand.ArchitectureFcultyCommand.ArchBuildingCommand;
-import com.reception.controller.command.UserCommand.ArchitectureFcultyCommand.ArchDesignCommand;
-import com.reception.controller.command.UserCommand.GetResultCommand;
-import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.MechExploatationCommand;
-import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.MechRepairCommand;
+import com.reception.controller.command.Admin.GetResultCommand;
+import com.reception.controller.command.Admin.GetUsersCommand;
+import com.reception.controller.command.Admin.GetRequestCommand;
+import com.reception.controller.command.UserCommand.AddRequestToDesignCommand.ArchDesignCommand;
+import com.reception.controller.command.UserCommand.AddRequestToBuildingCommand.ArchBuildingCommand;
+import com.reception.controller.command.UserCommand.AddRequestToExploatationCommand.MechExploatationCommand;
+import com.reception.controller.command.UserCommand.AddRequestToRepairCommand.MechRepairCommand;
+
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,21 +21,20 @@ public final class CommandProvider {
     private final static CommandProvider instance = new CommandProvider();
 
     private CommandProvider() {
-        commandMap.put("language", new LocalCommand());
+        commandMap.put("language", new LocalizationCommand());
         commandMap.put("logination", new LoginationPageCommand());
         commandMap.put("goToRegistration", new GoToRegistrationCommand());
         commandMap.put("logout", new LogOutCommand());
-        commandMap.put("registration", new RegistrationPageCommand());
-        commandMap.put("userSelectPage", new UserSelectPageCommand());
+        commandMap.put("registration", new RegistrationCommand());
         commandMap.put("Exploatation", new MechExploatationCommand());
         commandMap.put("CarRepair", new MechRepairCommand());
         commandMap.put("Building", new ArchBuildingCommand());
         commandMap.put("Design", new ArchDesignCommand());
-        commandMap.put("getRequests", new UsersRequestCommand());
+        commandMap.put("getRequests", new GetRequestCommand());
         commandMap.put("approvedRequests", new ApprovedRequestsCommand());
-        commandMap.put("showResult", new ShowResultCommand());
-        commandMap.put("showResultToUser", new GetResultCommand());
-        commandMap.put("showUsers", new ShowUsersCommand());
+        commandMap.put("showResult", new GetResultCommand());
+        commandMap.put("showResultToUser", new com.reception.controller.command.UserCommand.GetResultCommand());
+        commandMap.put("showUsers", new GetUsersCommand());
 
 
 

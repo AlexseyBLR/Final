@@ -16,7 +16,7 @@
             color: white !important;
         }
     </style>
-    <title>Title</title>
+    <title>Users</title>
 </head>
 <body>
 <jsp:include page="/Admin/adminBP.jsp"></jsp:include>

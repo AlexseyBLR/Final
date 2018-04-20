@@ -140,11 +140,11 @@
                         <fmt:message key="user.signout"/>
                         <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" style="width: 150px">
+                    <ul class="dropdown-menu" style="width: 180px">
                         <form method="get" action="FrontController">
                             <input type="hidden" name="command" value="logination">
                         </form>
-                        <h5 style="margin-left: 20px">${userFIO}</h5>
+                        <h5 style="font-weight: bold; margin-left: 20px">${userFIO}</h5>
                         <form action="FrontController" method="post">
                             <input type="hidden" name="command" value="logout">
                             <input type="submit" class="btn btn-primary" style="margin-left: 40px"

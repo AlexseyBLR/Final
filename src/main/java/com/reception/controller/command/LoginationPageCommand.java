@@ -2,9 +2,8 @@ package com.reception.controller.command;
 
 import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
-import com.reception.entity.NewUser;
 import com.reception.entity.User;
-import com.reception.service.CustomerService;
+import com.reception.service.UserService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.exception.ValidatorException;
 import com.reception.service.factory.ServiceFactory;
@@ -14,21 +13,17 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class LoginationPageCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
-    private final CustomerService service = factory.getCustomerService();
+    private final UserService service = factory.getUserService();
     private final static Logger logger = Logger.getLogger(LoginationPageCommand.class);
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ControllerException {
 
         String email = null;
         String password = null;
@@ -37,8 +32,8 @@ public class LoginationPageCommand implements Command {
             email = request.getParameter("email");
             password = request.getParameter("password");
 
-            NewUser user = service.findUserByEmailAndPassword(email, password);
-            if (user != null| !email.equals("")) {
+            User user = service.findUserByEmailAndPassword(email, password);
+            if (user != null) {
                 request.getSession().setAttribute("userFIO", user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
                 request.getSession().setAttribute("mathResult", user.getMathResult());
                 request.getSession().setAttribute("physResult", user.getPhysResult());
@@ -46,8 +41,7 @@ public class LoginationPageCommand implements Command {
                 request.getSession().setAttribute("sertResult", user.getSertResult());
                 request.getSession().setAttribute("role", user.getRole());
                 if (user.getRole().equals("user")) {
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/User/UserMain.jsp");
-                    dispatcher.forward(request, response);
+                    response.sendRedirect("/home");
                 }
                 if (user.getRole().equals("admin")) {
                     response.sendRedirect("/adminMain");

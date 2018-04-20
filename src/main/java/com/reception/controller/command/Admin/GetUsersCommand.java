@@ -1,7 +1,6 @@
 package com.reception.controller.command.Admin;
 
 import com.reception.controller.command.Command;
-import com.reception.dao.exception.DAOException;
 import com.reception.entity.User;
 import com.reception.service.UserService;
 import com.reception.service.exception.ServiceException;
@@ -13,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class ShowUsersCommand implements Command {
+public class GetUsersCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
     private final UserService userService = factory.getUserService();
-    private final static Logger logger = Logger.getLogger(ShowUsersCommand.class);
+    private final static Logger logger = Logger.getLogger(GetUsersCommand.class);
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
         try {

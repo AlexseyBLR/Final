@@ -2,7 +2,7 @@ package com.reception.entity;
 
 import java.util.Objects;
 
-public class ResultForRequest {
+public class UserRequest {
 
     private String FIO;
     private int mathResult;
@@ -12,7 +12,7 @@ public class ResultForRequest {
     private String facSpec;
     private String status;
 
-    public ResultForRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
+    public UserRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
         this.FIO = FIO;
         this.mathResult = mathResult;
         this.physResult = physResult;
@@ -80,8 +80,8 @@ public class ResultForRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ResultForRequest)) return false;
-        ResultForRequest that = (ResultForRequest) o;
+        if (!(o instanceof UserRequest)) return false;
+        UserRequest that = (UserRequest) o;
         return getMathResult() == that.getMathResult() &&
                 getPhysResult() == that.getPhysResult() &&
                 getLangResult() == that.getLangResult() &&
@@ -99,7 +99,7 @@ public class ResultForRequest {
 
     @Override
     public String toString() {
-        return "ResultForRequest{" +
+        return "UserRequest{" +
                 "FIO='" + FIO + '\'' +
                 ", mathResult=" + mathResult +
                 ", physResult=" + physResult +

@@ -10,7 +10,7 @@
 <fmt:setBundle basename="user"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>Result</title>
 </head>
 <body>
 <jsp:include page="/User/UserBP.jsp"></jsp:include>
@@ -29,7 +29,7 @@
         <thead class="thead-default">
         <tr>
             <th><fmt:message key="user.result.table.FIO"/></th>
-            <th><fmt:message key="user.result.table.facSpec"/></th>
+            <th><fmt:message key="user.facult"/>: <fmt:message key="user.faculty.mechanical"/></th>
             <c:forEach items="${resultME}" var="resultME">
         </tr>
         </thead>
@@ -46,7 +46,7 @@
         <thead class="thead-default">
         <tr>
             <th><fmt:message key="user.result.table.FIO"/></th>
-            <th><fmt:message key="user.result.table.facSpec"/></th>
+            <th><fmt:message key="user.facult"/>: <fmt:message key="user.faculty.mechanical"/></th>
             <c:forEach items="${resultMR}" var="resultMR">
         </tr>
         </thead>
@@ -63,7 +63,7 @@
         <thead class="thead-default">
         <tr>
             <th><fmt:message key="user.result.table.FIO"/></th>
-            <th><fmt:message key="user.result.table.facSpec"/></th>
+            <th><fmt:message key="user.facult"/>: <fmt:message key="user.faculty.architecture"/></th>
             <c:forEach items="${resultAB}" var="resultAB">
         </tr>
         </thead>
@@ -80,7 +80,7 @@
         <thead class="thead-default">
         <tr>
             <th><fmt:message key="user.result.table.FIO"/></th>
-            <th><fmt:message key="user.result.table.facSpec"/></th>
+            <th><fmt:message key="user.facult"/>: <fmt:message key="user.faculty.architecture"/></th>
             <c:forEach items="${resultAD}" var="resultAD">
         </tr>
         </thead>
