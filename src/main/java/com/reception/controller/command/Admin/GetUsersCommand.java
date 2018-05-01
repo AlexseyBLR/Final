@@ -1,6 +1,6 @@
 package com.reception.controller.command.Admin;
 
-import com.reception.controller.command.Command;
+import com.reception.controller.command.user.Command;
 import com.reception.entity.User;
 import com.reception.service.UserService;
 import com.reception.service.exception.ServiceException;

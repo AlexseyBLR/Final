@@ -1,16 +1,13 @@
-package com.reception.controller.command.UserCommand;
+package com.reception.controller.command.user;
 
 import com.reception.controller.command.Admin.UsersRequestCommand;
-import com.reception.controller.command.Command;
 import com.reception.controller.constant.Constant;
-import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
 import com.reception.entity.ResultForRequest;
 import com.reception.service.ResultService;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

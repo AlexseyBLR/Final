@@ -1,11 +1,10 @@
 package com.reception.controller;
 
-import com.reception.controller.command.Command;
-import com.reception.controller.command.CommandProvider;
+import com.reception.controller.command.user.Command;
+import com.reception.controller.command.user.CommandProvider;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

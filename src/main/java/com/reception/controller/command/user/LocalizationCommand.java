@@ -1,4 +1,4 @@
-package com.reception.controller.command;
+package com.reception.controller.command.user;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.reception.controller.command;
+package com.reception.controller.command.user;
 
 import com.reception.controller.exception.ControllerException;
 

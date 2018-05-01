@@ -22,6 +22,7 @@ public class Constant {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public final static String PAGE_USER = "/home";
         public final static String PAGE_REGISTRATION = "/registration";
         public final static String PAGE_ERROR = "/error";
@@ -69,6 +70,14 @@ public class Constant {
         public final static String PAGE_REGISTRATION = "/registration";
         public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+        public final static String PAGE_CUSTOMER = "/account";
+        public final static String PAGE_ADMIN = "/Admin/account";
+        public final static String PAGE_ERROR = "/error";
+        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
+        public final static String PAGE_REGISTRATION = "/registration";
+        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
+>>>>>>> parent of f48f517... version from 01/05/2018
         public final static String PAGE_MAIN = "/home";
         public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
         public final static String PAGE_LOGIN = "/login";
@@ -76,7 +85,10 @@ public class Constant {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
 =======

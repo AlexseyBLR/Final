@@ -1,4 +1,4 @@
-package com.reception.controller.command;
+package com.reception.controller.command.user;
 
 import com.reception.entity.User;
 import com.reception.service.UserService;
@@ -16,6 +16,7 @@ import java.io.IOException;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
 
 public class RegistrationCommand extends Thread implements Command {
@@ -23,6 +24,9 @@ public class RegistrationCommand extends Thread implements Command {
 =======
 public class RegistrationPageCommand implements Command {
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+public class RegistrationCommand implements Command {
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 public class RegistrationCommand implements Command {
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -77,11 +81,15 @@ public class RegistrationCommand implements Command {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 response.sendRedirect(PAGE_REGISTRATION);
 =======
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
                 dispatcher.forward(request, response);
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+                response.sendRedirect("/registration");
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
                 response.sendRedirect("/registration");
 >>>>>>> parent of f48f517... version from 01/05/2018

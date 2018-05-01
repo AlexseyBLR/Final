@@ -7,6 +7,7 @@ import com.reception.entity.User;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reception.service.validator.UserValidator;
 =======
 import com.reception.entity.NewUser;
@@ -17,6 +18,10 @@ import com.reception.service.validator.CustomerValidator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+=======
+import com.reception.service.validator.CustomerValidator;
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 import com.reception.service.validator.CustomerValidator;
 
@@ -40,10 +45,14 @@ import java.util.regex.Pattern;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class UserValidatorImpl extends AbstractValidator implements UserValidator<User> {
 =======
 public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<NewUser> {
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<User> {
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<User> {
 >>>>>>> parent of f48f517... version from 01/05/2018

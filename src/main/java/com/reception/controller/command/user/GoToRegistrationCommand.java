@@ -1,20 +1,18 @@
-package com.reception.controller.command;
+package com.reception.controller.command.user;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-import com.reception.controller.command.user.GetResultCommand;
+<<<<<<< HEAD
 =======
-import com.reception.controller.command.UserCommand.GetResultCommand;
 >>>>>>> parent of f48f517... version from 01/05/2018
 =======
-import com.reception.controller.command.UserCommand.GetResultCommand;
 >>>>>>> parent of f48f517... version from 01/05/2018
 =======
-import com.reception.controller.command.UserCommand.GetResultCommand;
 >>>>>>> parent of f48f517... version from 01/05/2018
-import org.apache.log4j.Logger;
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 
 =======
 >>>>>>> parent of 0ef4810... version 20/04/18

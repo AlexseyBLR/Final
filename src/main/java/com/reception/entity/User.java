@@ -2,7 +2,7 @@ package com.reception.entity;
 
 import java.util.Objects;
 
-public class NewUser {
+public class User {
 
     private String first_name;
     private String last_name;
@@ -16,26 +16,12 @@ public class NewUser {
     private int sertResult;
     private String role;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public User(){}
 
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
     public User(String first_name, String last_name, String patronymic, String email,
-                String password, String phoneNumber, int mathResult,
-                int physResult, int langResult, int sertResult, String role) {
-=======
-    public NewUser(String first_name, String last_name, String patronymic, String email,
                    String password, String phoneNumber, int mathResult,
                    int physResult, int langResult, int sertResult, String role) {
->>>>>>> parent of 0ef4810... version 20/04/18
+
 
         this.first_name = first_name;
         this.last_name = last_name;
@@ -141,14 +127,9 @@ public class NewUser {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!(o instanceof User)) return false;
         User user = (User) o;
         return getMathResult() == user.getMathResult() &&
@@ -162,69 +143,29 @@ public class NewUser {
                 Objects.equals(getPassword(), user.getPassword()) &&
                 Objects.equals(getPhoneNumber(), user.getPhoneNumber()) &&
                 Objects.equals(getRole(), user.getRole());
-=======
-        if (o == null || getClass() != o.getClass()) return false;
-        NewUser newUser = (NewUser) o;
-        return Objects.equals(first_name, newUser.first_name) &&
-                Objects.equals(last_name, newUser.last_name) &&
-                Objects.equals(patronymic, newUser.patronymic) &&
-                Objects.equals(email, newUser.email) &&
-                Objects.equals(password, newUser.password) &&
-                Objects.equals(phoneNumber, newUser.phoneNumber) &&
-                Objects.equals(mathResult, newUser.mathResult) &&
-                Objects.equals(physResult, newUser.physResult) &&
-                Objects.equals(langResult, newUser.langResult) &&
-                Objects.equals(sertResult, newUser.sertResult);
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-=======
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
->>>>>>> parent of f48f517... version from 01/05/2018
-        return Objects.equals(first_name, user.first_name) &&
-                Objects.equals(last_name, user.last_name) &&
-                Objects.equals(patronymic, user.patronymic) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(phoneNumber, user.phoneNumber) &&
-                Objects.equals(mathResult, user.mathResult) &&
-                Objects.equals(physResult, user.physResult) &&
-                Objects.equals(langResult, user.langResult) &&
-                Objects.equals(sertResult, user.sertResult);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(first_name, last_name, patronymic, email, password, phoneNumber, mathResult, physResult, langResult, sertResult);
+        return Objects.hash(getFirst_name(), getLast_name(), getPatronymic(), getEmail(), getPassword(), getPhoneNumber(), getMathResult(), getPhysResult(), getLangResult(), getSertResult(), getRole());
     }
 
     @Override
     public String toString() {
-        return "NewUser{" +
+        return "User{" +
                 "first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", patronymic='" + patronymic + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", mathResult='" + mathResult + '\'' +
-                ", physResult='" + physResult + '\'' +
-                ", langResult='" + langResult + '\'' +
-                ", sertResult='" + sertResult + '\'' +
+                ", mathResult=" + mathResult +
+                ", physResult=" + physResult +
+                ", langResult=" + langResult +
+                ", sertResult=" + sertResult +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
+
