@@ -1,6 +1,7 @@
 package com.reception.controller.command;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reception.controller.command.user.addRequestToBuilding.ArchBuildingCommand;
 import com.reception.controller.command.user.addRequestToDesign.ArchDesignCommand;
 import com.reception.controller.command.user.addRequestToExploatation.MechExploatationCommand;
@@ -21,6 +22,18 @@ import com.reception.controller.command.UserCommand.GetResultCommand;
 import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.MechExploatationCommand;
 import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.MechRepairCommand;
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+import com.reception.controller.command.Admin.ApprovedRequestsCommand;
+import com.reception.controller.command.Admin.GetResultCommand;
+import com.reception.controller.command.Admin.GetUsersCommand;
+import com.reception.controller.command.Admin.GetRequestCommand;
+import com.reception.controller.command.UserCommand.AddRequestToDesignCommand.ArchDesignCommand;
+import com.reception.controller.command.UserCommand.AddRequestToBuildingCommand.ArchBuildingCommand;
+import com.reception.controller.command.UserCommand.AddRequestToExploatationCommand.MechExploatationCommand;
+import com.reception.controller.command.UserCommand.AddRequestToRepairCommand.MechRepairCommand;
+
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,8 +59,9 @@ public final class CommandProvider {
         commandMap.put("approvedRequests", new ApprovedRequestsCommand());
 <<<<<<< HEAD
         commandMap.put("showResult", new GetResultCommand());
-        commandMap.put("showResultToUser", new com.reception.controller.command.user.GetResultCommand());
+        commandMap.put("showResultToUser", new com.reception.controller.command.UserCommand.GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
+<<<<<<< HEAD
         commandMap.put("updateInfo", new UpdateUserInfoCommand());
 =======
         commandMap.put("showResult", new ShowResultCommand());
@@ -55,6 +69,9 @@ public final class CommandProvider {
         commandMap.put("showUsers", new ShowUsersCommand());
 
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 
 
     }
@@ -66,5 +83,4 @@ public final class CommandProvider {
     public static CommandProvider getInstance() {
         return instance;
     }
-
 }

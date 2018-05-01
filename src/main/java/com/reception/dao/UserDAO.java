@@ -18,8 +18,12 @@ public interface UserDAO {
     List<NewUser> getAllUsers() throws DAOException;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     boolean update(User user) throws DAOException;
 =======
     void update(NewUser user) throws DAOException;
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+    void update(User user) throws DAOException;
+>>>>>>> parent of f48f517... version from 01/05/2018
 }

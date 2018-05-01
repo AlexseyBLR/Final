@@ -150,7 +150,6 @@
                             <input type="submit" class="btn btn-primary" style="margin-left: 40px"
                                    value=<fmt:message key="user.signout"/>>
                         </form>
-                        <a style="font-size: 15px" class="dropdown-item" href="/userUpdate"><fmt:message key="user.button.update"/></a>
                     </ul>
                 </li>
                 <\ n>

@@ -13,10 +13,13 @@ public class ResultForRequest {
     private String status;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public UserRequest(){
 
     }
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
     public UserRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
 =======
     public ResultForRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){

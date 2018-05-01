@@ -17,8 +17,11 @@ public class NewUser {
     private String role;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public User(){}
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
     public User(String first_name, String last_name, String patronymic, String email,
                 String password, String phoneNumber, int mathResult,
                 int physResult, int langResult, int sertResult, String role) {
@@ -132,9 +135,11 @@ public class NewUser {
     }
 
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!(o instanceof User)) return false;
         User user = (User) o;
@@ -163,12 +168,26 @@ public class NewUser {
                 Objects.equals(langResult, newUser.langResult) &&
                 Objects.equals(sertResult, newUser.sertResult);
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(first_name, user.first_name) &&
+                Objects.equals(last_name, user.last_name) &&
+                Objects.equals(patronymic, user.patronymic) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(phoneNumber, user.phoneNumber) &&
+                Objects.equals(mathResult, user.mathResult) &&
+                Objects.equals(physResult, user.physResult) &&
+                Objects.equals(langResult, user.langResult) &&
+                Objects.equals(sertResult, user.sertResult);
+>>>>>>> parent of f48f517... version from 01/05/2018
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(getFirst_name(), getLast_name(), getPatronymic(), getEmail(), getPassword(), getPhoneNumber(), getMathResult(), getPhysResult(), getLangResult(), getSertResult(), getRole());
+        return Objects.hash(first_name, last_name, patronymic, email, password, phoneNumber, mathResult, physResult, langResult, sertResult);
     }
 
     @Override

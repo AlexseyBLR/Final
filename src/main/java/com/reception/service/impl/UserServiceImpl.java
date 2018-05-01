@@ -8,7 +8,7 @@ import com.reception.entity.NewUser;
 import com.reception.service.CustomerService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.exception.ValidatorException;
-import com.reception.service.validator.UserValidator;
+import com.reception.service.validator.CustomerValidator;
 import com.reception.service.validator.impl.UserValidatorImpl;
 import org.apache.log4j.Logger;
 
@@ -20,7 +20,7 @@ public class UserServiceImpl implements CustomerService {
     private final UserDAO customerDAO = factory.getCustomerDao();
     private final static Logger logger = Logger.getLogger(UserServiceImpl.class);
 
-    private final UserValidator validator = new UserValidatorImpl();
+    private final CustomerValidator validator = new UserValidatorImpl();
 
     @Override
     public boolean saveCustomer(NewUser user) throws ServiceException {
@@ -57,18 +57,10 @@ public class UserServiceImpl implements CustomerService {
     }
 
     @Override
-    public String generateHashPassword(String pw) {
+    public String generateHashPassword(String pw) throws ServiceException {
+//        return this.hashGenerator.generateHashPassword(pw);
         return null;
     }
 
 
-    @Override
-    public boolean update(User user) throws ServiceException {
-        try {
-            customerDAO.update(user);
-            return  true;
-        } catch (DAOException e) {
-            throw new ServiceException("update user method",e);
-        }
-    }
 }

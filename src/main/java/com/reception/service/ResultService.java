@@ -12,7 +12,7 @@ public interface ResultService {
 <<<<<<< HEAD
     boolean saveResult(UserRequest request) throws DAOException;
     boolean updateUsers(UserRequest request);
-    List<UserRequest> getAllUsers() throws ServiceException;
+    List<UserRequest> getAllUsers() throws ServiceException, DAOException;
     List<UserRequest> getResult(String facultySpeciality) throws DAOException;
 =======
     boolean saveResult(ResultForRequest resultForRequest) throws DAOException;

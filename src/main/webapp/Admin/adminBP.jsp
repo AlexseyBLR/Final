@@ -105,8 +105,9 @@
                     <ul class="dropdown-menu">
 
                         <!--ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-                        <li><a href="/updatePlan" class="faculty"><fmt:message key="admin.faculties.mechanical"/></a></li>
-
+                        <li><a href="#" class="faculty"><fmt:message key="admin.faculties.mechanical"/></a></li>
+                        <li><a href="#" class="faculty"><fmt:message key="admin.faculriest.architecture"/></a></li>
+                        <li><a href="#" class="faculty"><fmt:message key="admin.faculties.comScience"/></a></li>
                     </ul>
                 </li>
 

@@ -11,6 +11,10 @@ public class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of f48f517... version from 01/05/2018
     private final UserService userService = new UserServiceImpl();
 =======
 
@@ -20,12 +24,14 @@ public class ServiceFactory {
     private final ResultService resultService = new ResultServiceImpl();
 
 
-
     private ServiceFactory() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
     public UserService getUserService() {
         return userService;
 =======

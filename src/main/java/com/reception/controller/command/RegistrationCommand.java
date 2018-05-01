@@ -6,10 +6,13 @@ import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
 
@@ -18,6 +21,9 @@ public class RegistrationCommand extends Thread implements Command {
 =======
 public class RegistrationPageCommand implements Command {
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+public class RegistrationCommand implements Command {
+>>>>>>> parent of f48f517... version from 01/05/2018
 
     private final static Logger logger = Logger.getLogger(RegistrationPageCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
@@ -60,11 +66,15 @@ public class RegistrationPageCommand implements Command {
                 response.sendRedirect("/index.jsp");
             }else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 response.sendRedirect(PAGE_REGISTRATION);
 =======
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
                 dispatcher.forward(request, response);
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+                response.sendRedirect("/registration");
+>>>>>>> parent of f48f517... version from 01/05/2018
             }
 
         }catch (ServiceException | IOException | RuntimeException e) {

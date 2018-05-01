@@ -1,7 +1,11 @@
 package com.reception.controller.command;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reception.controller.command.user.GetResultCommand;
+=======
+import com.reception.controller.command.UserCommand.GetResultCommand;
+>>>>>>> parent of f48f517... version from 01/05/2018
 import org.apache.log4j.Logger;
 
 =======
