@@ -3,10 +3,6 @@ package com.reception.dao.factory;
 
 import com.reception.dao.UserDAO;
 import com.reception.dao.ResultDAO;
-//import com.reception.dao.impl.RequestDAOImpl.RequestArchBuildDAOImpl;
-//import com.reception.dao.impl.RequestDAOImpl.RequestArchDesDAOImpl;
-//import com.reception.dao.impl.RequestDAOImpl.RequestMechExplDAOImpl;
-//import com.reception.dao.impl.RequestDAOImpl.RequestMechRepDAOImpl;
 import com.reception.dao.impl.RequestsDAOImpl;
 import com.reception.dao.impl.UserDAOImpl;
 

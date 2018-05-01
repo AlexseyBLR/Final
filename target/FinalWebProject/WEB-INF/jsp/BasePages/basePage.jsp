@@ -148,7 +148,7 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: 220px">
-                        <form onclick="return validateForm()" method="get" action="FrontController" role="form" name="registration_form">
+                        <form method="post" action="FrontController" role="form" name="registration_form">
                             <input type="hidden" name="command" value="logination">
                             <div class="form-group">
                                 <label for="email" class="margin">Email</label>
@@ -168,7 +168,7 @@
                                 <input type="submit" class="btn btn-primary" style="margin-left: 10px" value=<fmt:message key="local.button.login"/>>
                             </div>
                         </form>
-                        <form action="FrontController" method="get">
+                        <form action="FrontController" method="post">
                             <input type="hidden" name="command" value="goToRegistration">
                             <input type="submit" class="btn btn-primary" style="margin-left: 55px" value=<fmt:message key="local.button.registration"/> >
                         </form>

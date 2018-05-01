@@ -1,6 +1,7 @@
 package com.reception.controller.command.user.Architecture.addRequestToBuildingCommand;
 
-import com.reception.controller.command.user.Command;
+import com.reception.controller.command.Command;
+import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
 import com.reception.entity.UserRequest;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.RequestProperty;
+
 
 public class ArchBuildingCommand implements Command {
 
@@ -40,7 +41,7 @@ public class ArchBuildingCommand implements Command {
         int sertResult = Integer.parseInt(String.valueOf(session.getAttribute("sertResult")));
 
 
-        UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, RequestProperty.ARCHITECTURE_BUILDING_FACULTY);
+        UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.ARCHITECTURE_BUILDING_FACULTY);
 
         boolean result = resultService.saveResult(resultForRequest);
         if (result) {

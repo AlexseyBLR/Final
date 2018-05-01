@@ -1,34 +1,27 @@
-package com.reception.controller.command.user;
+package com.reception.controller.command;
 
 import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
-import com.reception.entity.NewUser;
 import com.reception.entity.User;
-import com.reception.service.CustomerService;
+import com.reception.service.UserService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.exception.ValidatorException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
+
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN;
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER;
+
 
 public class LoginationPageCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
-    private final CustomerService service = factory.getCustomerService();
+    private final UserService service = factory.getUserService();
     private final static Logger logger = Logger.getLogger(LoginationPageCommand.class);
 
 
@@ -42,7 +35,7 @@ public class LoginationPageCommand implements Command {
             email = request.getParameter("email");
             password = request.getParameter("password");
 
-            NewUser user = service.findUserByEmailAndPassword(email, password);
+            User user = service.findUserByEmailAndPassword(email, password);
             if (user != null| !email.equals("")) {
                 request.getSession().setAttribute("userFIO", user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
                 request.getSession().setAttribute("mathResult", user.getMathResult());
@@ -51,31 +44,12 @@ public class LoginationPageCommand implements Command {
                 request.getSession().setAttribute("sertResult", user.getSertResult());
                 request.getSession().setAttribute("role", user.getRole());
                 if (user.getRole().equals("user")) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                     response.sendRedirect(PAGE_USER);
-=======
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/User/UserMain.jsp");
-                    dispatcher.forward(request, response);
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
-                    response.sendRedirect("/home");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    response.sendRedirect("/home");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    response.sendRedirect("/home");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    response.sendRedirect("/home");
->>>>>>> parent of f48f517... version from 01/05/2018
+
                 }
                 if (user.getRole().equals("admin")) {
-                    response.sendRedirect("/adminMain");
+                    response.sendRedirect(PAGE_ADMIN);
                 }
             } else {
                 response.sendRedirect("/index.jsp");

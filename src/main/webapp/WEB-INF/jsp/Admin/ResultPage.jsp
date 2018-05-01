@@ -22,7 +22,7 @@
 <jsp:include page="/Admin/adminBP.jsp"></jsp:include>
 
 <form action="FrontController" method="post">
-    <input type="hidden" name="command" value="showResult">
+    <input type="hidden" name="command" value="showResultForAdmin">
     <input type="submit" class="btn btn-primary" value=
     <fmt:message key="admin.button.show"/> style="margin-left: 150px">
     <img src="https://icon-icons.com/icons2/247/PNG/512/REFRESH2_26887.png" width="30px" height="30px"/>

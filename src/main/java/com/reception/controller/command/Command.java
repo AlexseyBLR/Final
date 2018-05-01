@@ -1,4 +1,4 @@
-package com.reception.controller.command.user;
+package com.reception.controller.command;
 
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;

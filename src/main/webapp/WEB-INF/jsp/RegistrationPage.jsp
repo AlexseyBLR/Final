@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-<jsp:include page="BasePages/RegBP.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/jsp/BasePages/RegBP.jsp"></jsp:include>
 <div class="registration_container border rounded" style="width: 510px; margin: 0 auto;  padding: 10px;" >
     <div class="container">
         <form onclick="return validateForm()" class="form-horizontal" role="form" action="/frontControllerReg" method="post" name="registration_form" >
@@ -35,7 +35,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="firstName"  class="form-control" autofocus  name="firstName">
                 </div>
-                <p id = "name_error" style="color: red"></p>
+                <p id = "name_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -43,7 +43,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="lastName"  class="form-control"  autofocus name="lastName">
                 </div>
-                <p id = "second_name_error" style="color: red"></p>
+                <p id = "second_name_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -51,7 +51,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="patronymic"  class="form-control" autofocus  name="patronymic">
                 </div>
-                <p id = "patronymic_error" style="color: red"></p>
+                <p id = "patronymic_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
 
@@ -60,7 +60,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="phone"  class="form-control" autofocus name="phone">
                 </div>
-                <p id = "phone_error" style="color: red"></p>
+                <p id = "phone_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
 
@@ -70,7 +70,7 @@
                 <div class="col-sm-9">
                     <input type="email" id="email" placeholder="Email" class="form-control" autofocus name="email">
                 </div>
-                <p id = "email_error" style="color: red"></p>
+                <p id = "email_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
 
@@ -79,7 +79,7 @@
                 <div class="col-sm-9">
                     <input type="password" id="password" placeholder="Password" class="form-control" autofocus name="password">
                 </div>
-                <p id = "password_error" style="color: red"></p>
+                <p id = "password_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -87,7 +87,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="math"  class="form-control" autofocus name="math">
                 </div>
-                <p id = "math_error" style="color: red"></p>
+                <p id = "math_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -95,7 +95,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="phys"  class="form-control" autofocus name="phys">
                 </div>
-                <p id = "phys_error" style="color: red"></p>
+                <p id = "phys_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -103,7 +103,7 @@
                 <div class="col-sm-9">
                     <input type="text" id="lang"  class="form-control" autofocus name="lang">
                 </div>
-                <p id = "lang_error" style="color: red"></p>
+                <p id = "lang_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
             <div class="form-group form-inline">
@@ -111,34 +111,11 @@
                 <div class="col-sm-9">
                     <input type="text" id="sert"  class="form-control" autofocus name="sert">
                 </div>
-                <p id = "sert_error" style="color: red"></p>
+                <p id = "sert_error" style="margin-left: 250px; font-size: 13px; color: red"></p>
             </div>
 
 
-<<<<<<< HEAD
-            <input class="btn btn-primary" style="margin-top: 30px; margin-left: 100px" type="submit" value=
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <fmt:message key="local.toRegister"/>
-=======
-
-
             <input class="btn btn-primary" style="margin-top: 30px; margin-left: 100px" type="submit" value=<fmt:message key="local.toRegister"/> />
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
-                    <fmt:message key="local.toRegister"/>/>
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    <fmt:message key="local.toRegister"/>/>
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    <fmt:message key="local.toRegister"/>/>
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                    <fmt:message key="local.toRegister"/>/>
->>>>>>> parent of f48f517... version from 01/05/2018
         </form>
     </div>
 

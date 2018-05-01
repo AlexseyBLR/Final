@@ -1,7 +1,7 @@
 package com.reception.controller.constant;
 
 public class Constant {
-    public static class RegistrationProperty{
+    public static class RegistrationProperty {
 
         public final static String FIRST_NAME_PARAMETER = "first_name";
         public final static String LAST_NAME_PARAMETER = "last_sureName";
@@ -16,13 +16,8 @@ public class Constant {
 
     }
 
-    public static class  WebProperty {
+    public static class WebProperty {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         public final static String PAGE_USER = "/home";
         public final static String PAGE_REGISTRATION = "/registration";
         public final static String PAGE_ERROR = "/error";
@@ -35,66 +30,10 @@ public class Constant {
         public final static String PAGE_ADMIN_RESULT = "/adminResult";
         public final static String PAGE_ADMIN_REQUEST = "/adminRequests";
         public final static String PAGE_ADMIN_SHOW_USERS = "/showUsers";
-
+        public final static String PAGE_LOGIN = "/login";
         public final static String HIDDEN_PARAMETER = "command";
 
 
-=======
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/admin/customers";
-        public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/admin/product/setting?id=";
-=======
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/Admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
-        public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/Admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
-        public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/Admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
-        public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/Admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
-        public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
->>>>>>> parent of f48f517... version from 01/05/2018
-        public final static String PAGE_MAIN = "/home";
-        public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
-        public final static String PAGE_LOGIN = "/login";
-        public final static String PAGE_PRODUCT = "/product";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
->>>>>>> parent of f48f517... version from 01/05/2018
     }
 
     public static class RequestProperty {
@@ -113,3 +52,4 @@ public class Constant {
         public static final String MECHANICAL_REPAIR_FACULTY = "'Faculty: MECHANICAL, speciality: REPAIR'";
     }
 }
+

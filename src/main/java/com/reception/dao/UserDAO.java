@@ -11,12 +11,10 @@ public interface UserDAO {
 
     User findCustomerByEmailAndPassword(String email , String password) throws DAOException;
 
-    User findCustomerByEmailAndPw(String emil, String pw) throws DAOException;
-
     User get(String email) throws DAOException;
 
     List<User> getAllUsers() throws DAOException;
 
-    boolean update(User user) throws DAOException;
+    void update(User user) throws DAOException;
 
 }

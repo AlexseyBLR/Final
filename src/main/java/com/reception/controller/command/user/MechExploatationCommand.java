@@ -1,5 +1,7 @@
 package com.reception.controller.command.user;
 
+import com.reception.controller.command.Command;
+import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
 import com.reception.entity.UserRequest;
@@ -14,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.RequestProperty;
 
 public class MechExploatationCommand implements Command {
 
@@ -41,7 +42,7 @@ public class MechExploatationCommand implements Command {
         int sertResult = Integer.parseInt(String.valueOf(session.getAttribute("sertResult")));
 
 
-        UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, RequestProperty.MECHANICAL_EXPLOATATION_FACULTY);
+        UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.MECHANICAL_EXPLOATATION_FACULTY);
 
         boolean result = resultService.saveResult(resultForRequest);
         if(result){

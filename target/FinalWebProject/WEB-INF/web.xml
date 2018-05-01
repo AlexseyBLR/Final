@@ -28,6 +28,16 @@
 
 
     <servlet>
+        <servlet-name>FrontControllerRegistration</servlet-name>
+        <jsp-file>/WEB-INF/jsp/RegistrationPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerRegistration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>FrontControllerMain</servlet-name>
         <jsp-file>/WEB-INF/jsp/User/UserMain.jsp</jsp-file>
     </servlet>

@@ -1,7 +1,7 @@
 package com.reception.controller;
 
-import com.reception.controller.command.user.Command;
-import com.reception.controller.command.user.CommandProvider;
+import com.reception.controller.command.Command;
+import com.reception.controller.command.CommandProvider;
 import com.reception.controller.exception.ControllerException;
 import com.reception.dao.exception.DAOException;
 
@@ -24,22 +24,14 @@ public final class FrontController extends HttpServlet {
 
 
         String commandName = request.getParameter("command");
-        Command command1 = CommandProvider.getInstance().getCommandMap().get(commandName);
+        Command command = CommandProvider.getInstance().getCommandMap().get(commandName);
         try {
-            command1.execute(request, response);
+            command.execute(request, response);
         } catch (ControllerException e) {
             e.printStackTrace();
         } catch (DAOException e) {
             e.printStackTrace();
         }
     }
-
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-
-    }
-
 
 }

@@ -5,7 +5,7 @@ import com.reception.dao.exception.DAOException;
 import com.reception.dao.impl.connectionPool.ConnectionPool;
 import com.reception.dao.impl.connectionPool.ConnectionPoolImpl;
 import com.reception.dao.impl.connectionPool.WrappedConnection;
-import com.reception.entity.ResultForRequest;
+import com.reception.entity.UserRequest;
 import org.apache.log4j.Logger;
 
 import java.sql.PreparedStatement;
@@ -53,18 +53,18 @@ public class RequestsDAOImpl implements ResultDAO {
 
 
     @Override
-    public boolean addResult(ResultForRequest resultForRequest) throws DAOException {
+    public boolean addResult(UserRequest userRequest) throws DAOException {
         try (WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
              PreparedStatement statement = connection.getPreparedStatement(SQL_SAVE_PREPARED_STATEMENT)
         ) {
 
-            statement.setString(FIO_COLUMN_INDEX, resultForRequest.getFIO());
-            statement.setInt(MATH_COLUMN_INDEX, resultForRequest.getMathResult());
-            statement.setInt(PHYS_COLUMN_INDEX, resultForRequest.getPhysResult());
-            statement.setInt(LANG_COLUMN_INDEX, resultForRequest.getLangResult());
-            statement.setInt(SERT_COLUMN_INDEX, resultForRequest.getSertResult());
+            statement.setString(FIO_COLUMN_INDEX, userRequest.getFIO());
+            statement.setInt(MATH_COLUMN_INDEX, userRequest.getMathResult());
+            statement.setInt(PHYS_COLUMN_INDEX, userRequest.getPhysResult());
+            statement.setInt(LANG_COLUMN_INDEX, userRequest.getLangResult());
+            statement.setInt(SERT_COLUMN_INDEX, userRequest.getSertResult());
             statement.setString(STATUS_COLUMN_INDEX, STATUS);
-            statement.setString(FACSPEC_COLUMN_INDEX, resultForRequest.getFacSpec());
+            statement.setString(FACSPEC_COLUMN_INDEX, userRequest.getFacSpec());
             statement.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -74,9 +74,9 @@ public class RequestsDAOImpl implements ResultDAO {
     }
 
     @Override
-    public List<ResultForRequest> getAll() throws DAOException {
-        List<ResultForRequest> requests = new ArrayList<>();
-        ResultForRequest request = null;
+    public List<UserRequest> getAll() throws DAOException {
+        List<UserRequest> requests = new ArrayList<>();
+        UserRequest request = null;
         try (WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
              Statement statement = connection.createStatement()) {
             ResultSet rs = statement.executeQuery(SELECT_ALL_SQL);
@@ -88,7 +88,7 @@ public class RequestsDAOImpl implements ResultDAO {
                 int sertResult = Integer.parseInt(rs.getString(SERT_COLUMN_INDEX));
                 String status = rs.getString(STATUS_COLUMN_INDEX);
                 String faculty_speciality = rs.getString(FACSPEC_COLUMN_INDEX);
-                request = new ResultForRequest(FIO, mathResult, physResult, langResult, sertResult, faculty_speciality);
+                request = new UserRequest(FIO, mathResult, physResult, langResult, sertResult, faculty_speciality);
                 request.setStatus(status);
                 requests.add(request);
             }
@@ -100,7 +100,7 @@ public class RequestsDAOImpl implements ResultDAO {
     }
 
     @Override
-    public void updateUsers(ResultForRequest resultForRequest) throws DAOException {
+    public void updateUsers(UserRequest userRequest) throws DAOException {
         try (WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
              PreparedStatement statement = connection.getPreparedStatement(SQL_UPDATE_STATUS_PREPARED_STATEMENT)
         ) {
@@ -115,11 +115,11 @@ public class RequestsDAOImpl implements ResultDAO {
     }
 
     @Override
-    public List<ResultForRequest> getEnlistedUsers(String facultySpeciality) throws DAOException {
+    public List<UserRequest> getEnlistedUsers(String facultySpeciality) throws DAOException {
         this.facultySpeciality = facultySpeciality;
         String SQL_ENLISTED_PREPARED_STATEMENT = "select * from requests where status='applied' and faculty_speciality=" + this.facultySpeciality + " order by Mresult+Phresilt+Lresult+Sresult desc limit 3;";
-        List<ResultForRequest> requests = new ArrayList<>();
-        ResultForRequest request = null;
+        List<UserRequest> requests = new ArrayList<>();
+        UserRequest request = null;
         try (WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
              Statement statement = connection.createStatement()) {
             ResultSet rs = statement.executeQuery(SQL_ENLISTED_PREPARED_STATEMENT);
@@ -131,7 +131,7 @@ public class RequestsDAOImpl implements ResultDAO {
                 int sertResult = Integer.parseInt(rs.getString(SERT_COLUMN_INDEX));
                 String status = rs.getString(STATUS_COLUMN_INDEX);
                 String faculty_speciality = rs.getString(FACSPEC_COLUMN_INDEX);
-                request = new ResultForRequest(FIO, mathResult, physResult, langResult, sertResult, faculty_speciality);
+                request = new UserRequest(FIO, mathResult, physResult, langResult, sertResult, faculty_speciality);
                 request.setStatus(status);
                 requests.add(request);
             }

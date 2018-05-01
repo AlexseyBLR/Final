@@ -8,7 +8,6 @@ import com.reception.dao.impl.connectionPool.ConnectionPool;
 import com.reception.dao.impl.connectionPool.ConnectionPoolImpl;
 import com.reception.dao.impl.connectionPool.WrappedConnection;
 import com.reception.entity.User;
-import com.reception.entity.User;
 import org.apache.log4j.Logger;
 
 import java.sql.PreparedStatement;
@@ -63,7 +62,7 @@ public class UserDAOImpl implements UserDAO {
 
 
 
-    
+
     @Override
     public boolean save(User user) throws DAOException {
 
@@ -87,11 +86,6 @@ public class UserDAOImpl implements UserDAO {
             logger.error("Exception from DAO, save Customer method ",e);
             throw new DAOException("Save Customer method",e);
         }
-    }
-
-    @Override
-    public User findCustomerByEmailAndPassword(String email, String password) throws DAOException {
-        return null;
     }
 
 
@@ -130,8 +124,10 @@ public class UserDAOImpl implements UserDAO {
     }
 
 
+
+
     @Override
-    public User findCustomerByEmailAndPw(String email, String password) throws DAOException {
+    public User findCustomerByEmailAndPassword(String email, String password) throws DAOException {
         User user = null;
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(FIND_BY_EMAIL_AND_PW_SQL_STATEMENT))
@@ -140,7 +136,7 @@ public class UserDAOImpl implements UserDAO {
             statement.setString(PASSWORD_PARAMETER_INDEX,password);
             ResultSet rs = statement.executeQuery();
             if(rs != null){
-              user = buildNewUser(rs);
+                user = buildNewUser(rs);
             }
             return user;
         } catch (SQLException e) {
@@ -198,7 +194,7 @@ public class UserDAOImpl implements UserDAO {
 
 
     @Override
-    public boolean update(User user) throws DAOException {
+    public void update(User user) throws DAOException {
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_UPDATE_PREPARED_STATEMENT)
         ){

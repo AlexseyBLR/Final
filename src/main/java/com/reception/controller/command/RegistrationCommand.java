@@ -1,4 +1,4 @@
-package com.reception.controller.command.user;
+package com.reception.controller.command;
 
 import com.reception.entity.User;
 import com.reception.service.UserService;
@@ -12,32 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
 
-public class RegistrationCommand extends Thread implements Command {
 
-=======
-public class RegistrationPageCommand implements Command {
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
 public class RegistrationCommand implements Command {
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-public class RegistrationCommand implements Command {
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-public class RegistrationCommand implements Command {
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-public class RegistrationCommand implements Command {
->>>>>>> parent of f48f517... version from 01/05/2018
 
-    private final static Logger logger = Logger.getLogger(RegistrationPageCommand.class);
+    private final static Logger logger = Logger.getLogger(RegistrationCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
     private UserService service = factory.getUserService();
 
@@ -74,37 +54,23 @@ public class RegistrationCommand implements Command {
 
             boolean result = service.saveCustomer(user);
 
-            if(result==true){
+            if (result == true) {
                 response.sendRedirect("/index.jsp");
-            }else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+            } else {
+
                 response.sendRedirect(PAGE_REGISTRATION);
-=======
+
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
                 dispatcher.forward(request, response);
->>>>>>> parent of 0ef4810... version 20/04/18
-=======
+
                 response.sendRedirect("/registration");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                response.sendRedirect("/registration");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                response.sendRedirect("/registration");
->>>>>>> parent of f48f517... version from 01/05/2018
-=======
-                response.sendRedirect("/registration");
->>>>>>> parent of f48f517... version from 01/05/2018
             }
 
-        }catch (ServiceException | IOException | RuntimeException e) {
-            logger.error("Exception from SaveCustomer",e);
+        } catch (ServiceException | IOException | RuntimeException e) {
+            logger.error("Exception from SaveCustomer", e);
             response.sendRedirect("");
         }
 
     }
 }
+
