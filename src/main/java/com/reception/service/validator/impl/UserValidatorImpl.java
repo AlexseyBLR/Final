@@ -5,6 +5,7 @@ import com.reception.controller.constant.Constant;
 <<<<<<< HEAD
 import com.reception.entity.User;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reception.service.validator.UserValidator;
 =======
 import com.reception.entity.NewUser;
@@ -19,6 +20,10 @@ import java.util.Date;
 import com.reception.service.validator.CustomerValidator;
 
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+import com.reception.service.validator.CustomerValidator;
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -28,10 +33,14 @@ import java.util.regex.Pattern;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class UserValidatorImpl extends AbstractValidator implements UserValidator<User> {
 =======
 public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<NewUser> {
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<User> {
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<User> {
 >>>>>>> parent of f48f517... version from 01/05/2018

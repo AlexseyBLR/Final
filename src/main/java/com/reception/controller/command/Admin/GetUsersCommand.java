@@ -13,10 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+<<<<<<< HEAD:src/main/java/com/reception/controller/command/Admin/GetUsersCommand.java
 <<<<<<< HEAD:src/main/java/com/reception/controller/command/adminCommand/GetUsersCommand.java
 <<<<<<< HEAD:src/main/java/com/reception/controller/command/adminCommand/GetUsersCommand.java
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018:src/main/java/com/reception/controller/command/Admin/GetUsersCommand.java
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018:src/main/java/com/reception/controller/command/Admin/GetUsersCommand.java
 public class GetUsersCommand implements Command {

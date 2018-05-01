@@ -12,9 +12,13 @@
     <list default="true" id="62c5ca29-a6df-4fee-b0e8-3d09f6959b7f" name="Default" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Final_Web_Project_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Final_Web_Project_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -32,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/ArchitectureFcultyCommand/AddRequestToDesignCommand.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/GetResultCommand.java" afterPath="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
@@ -45,6 +50,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/LoginationPageCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/LoginationPageCommand.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/RegistrationPageCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/RegistrationPageCommand.java" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/MechanicalFacultyCommand/AddRequestToExploatationCommand.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/MechanicalFacultyCommand/AddRequestToRepairCommand.java" afterPath="" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/MechanicalFacultyCommand/AddRequestToExploatationCommand.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/MechanicalFacultyCommand/AddRequestToRepairCommand.java" afterPath="" />
@@ -71,6 +80,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/Users.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/Users.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/basePage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/basePage.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/RegistrationPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/RegistrationPage.jsp" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/src/main/resources/local.properties" afterPath="" />
@@ -100,6 +110,14 @@
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/Admin/adminBP.jsp" afterPath="$PROJECT_DIR$/target/FinalWebProject/Admin/adminBP.jsp" />
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Request.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Request.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/UserMain.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/UserMain.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject.war" afterPath="$PROJECT_DIR$/target/FinalWebProject.war" />
+>>>>>>> parent of f48f517... version from 01/05/2018
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/User/UserBP.jsp" afterPath="$PROJECT_DIR$/target/FinalWebProject/User/UserBP.jsp" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/command/Admin/ApprovedRequestsCommand.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/command/Admin/ApprovedRequestsCommand.class" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/command/Admin/ShowResultCommand.class" afterPath="" />
@@ -119,6 +137,7 @@
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/command/UserCommand/MechanicalFacultyCommand/MechRepairCommand.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/command/UserSelectPageCommand.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/constant/Constant$WebProperty.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/controller/constant/Constant$WebProperty.class" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/1index.jsp" afterPath="" />
@@ -140,6 +159,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/NewUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/ResultForRequest.class" afterPath="" />
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/ResultDAO.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/ResultDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/UserDAO.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/RequestsDAOImpl.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/RequestsDAOImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/UserDAOImpl.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/UserDAOImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/NewUser.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/ResultForRequest.class" afterPath="" />
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -183,6 +210,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/reception/controller/command/UserSelectPageCommand.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/reception/controller/constant/Constant$WebProperty.class" afterPath="$PROJECT_DIR$/target/classes/com/reception/controller/constant/Constant$WebProperty.class" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/connectionPool/WrappedConnection.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/dao/impl/connectionPool/WrappedConnection.class" />
       <change beforePath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/NewUser.class" afterPath="$PROJECT_DIR$/target/FinalWebProject/WEB-INF/classes/com/reception/entity/NewUser.class" />
@@ -222,6 +250,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/entity/NewUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/entity/ResultForRequest.class" afterPath="" />
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/dao/ResultDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/reception/dao/ResultDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/dao/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/reception/dao/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/dao/impl/RequestsDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/reception/dao/impl/RequestsDAOImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/reception/dao/impl/UserDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/reception/dao/impl/UserDAOImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/reception/entity/NewUser.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/reception/entity/ResultForRequest.class" afterPath="" />
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -287,6 +323,7 @@
   <component name="FileEditorManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <leaf>
       <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/constant/Constant.java">
@@ -309,11 +346,20 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ArchDesignCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToDesignCommand/ArchDesignCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> parent of f48f517... version from 01/05/2018
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="LogOutCommand.java" pinned="false" current-in-tab="false">
@@ -332,6 +378,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/CommandProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
+=======
+      <file leaf-file-name="CommandProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/CommandProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+>>>>>>> parent of f48f517... version from 01/05/2018
               <caret line="9" column="96" lean-forward="false" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="96" />
               <folding>
                 <element signature="e#2007#2008#0" expanded="true" />
@@ -360,6 +412,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
 >>>>>>> parent of f48f517... version from 01/05/2018
               <folding />
             </state>
@@ -383,11 +436,14 @@
             <state relative-caret-position="858">
               <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="RegistrationCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/RegistrationCommand.java">
@@ -408,11 +464,19 @@
             <state relative-caret-position="814">
               <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+>>>>>>> parent of f48f517... version from 01/05/2018
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
@@ -561,6 +625,56 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="basePage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/basePage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3212">
+              <caret line="146" column="39" lean-forward="false" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+              <folding />
+>>>>>>> parent of f48f517... version from 01/05/2018
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginationPageCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/LoginationPageCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user" pinned="false" current-in-tab="false">
+        <entry file="das://table:/ded4d256/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7/receptioncompany.user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="82" column="96" lean-forward="false" selection-start-line="82" selection-start-column="96" selection-end-line="82" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/user.properties">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
           <provider selected="true" editor-type-id="ResourceBundle">
@@ -602,6 +716,7 @@
       <list>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/CommanMapCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/GetResultCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Command.xsd" />
@@ -635,6 +750,8 @@
         <option value="$PROJECT_DIR$/src/tests/java/com.reception/service.validator/ValidationTest.java" />
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
         <option value="$PROJECT_DIR$/src/main/java/com/reception/entity/UserRequest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/User/UserBP.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/loginValidator.js" />
@@ -662,6 +779,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/ArchitectureFcultyCommand/AddRequestToBuildingCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/LocalizationCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/RegistrationCommand.java" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/reception/entity/User.java" />
 =======
@@ -718,6 +836,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/reception/entity/NewUser.java" />
 >>>>>>> parent of 0ef4810... version 20/04/18
 =======
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/FrontController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/Connection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/WrappedConnection.java" />
@@ -742,6 +862,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/reception/controller/command/LoginationPageCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/user.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp" />
+<<<<<<< HEAD
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
 >>>>>>> parent of f48f517... version from 01/05/2018
       </list>
     </option>
@@ -892,6 +1015,7 @@
               <item name="command" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="user" type="462c0819:PsiDirectoryNode" />
 =======
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
@@ -927,6 +1051,9 @@
 =======
               <item name="UserCommand" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+              <item name="UserCommand" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -937,6 +1064,7 @@
               <item name="reception" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="command" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <item name="user" type="462c0819:PsiDirectoryNode" />
@@ -1014,6 +1142,10 @@
               <item name="UserCommand" type="462c0819:PsiDirectoryNode" />
               <item name="AddRequestToBuildingCommand" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+              <item name="UserCommand" type="462c0819:PsiDirectoryNode" />
+              <item name="AddRequestToBuildingCommand" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -1029,6 +1161,7 @@
               <item name="Final_Web_Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
 <<<<<<< HEAD
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="reception" type="462c0819:PsiDirectoryNode" />
@@ -1065,35 +1198,44 @@
               <item name="reception" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="validator" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Web_Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="reception" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="validator" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Web_Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="resources" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Web_Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="reception" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -1107,10 +1249,15 @@
               <item name="validator" type="462c0819:PsiDirectoryNode" />
 =======
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of 0ef4810... version 20/04/18
 =======
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
@@ -1127,10 +1274,16 @@
               <item name="impl" type="462c0819:PsiDirectoryNode" />
 =======
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="js" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of 0ef4810... version 20/04/18
 =======
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="BasePages" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of f48f517... version from 01/05/2018
             </path>
             <path>
@@ -1146,6 +1299,7 @@
               <item name="User" type="462c0819:PsiDirectoryNode" />
 >>>>>>> parent of 0ef4810... version 20/04/18
             </path>
+<<<<<<< HEAD
             <path>
               <item name="FinalWebProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Web_Project" type="462c0819:PsiDirectoryNode" />
@@ -1220,12 +1374,19 @@
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
               <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
           </expand>
           <select />
         </subPane>
       </pane>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
       <pane id="Scratches" />
       <pane id="Scope" />
@@ -1242,11 +1403,14 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
 =======
       <pane id="Scratches" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
       <pane id="PackagesPane" />
@@ -1274,6 +1438,7 @@
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\Admin" />
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\resources" />
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\WEB-INF" />
+<<<<<<< HEAD
 =======
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\js" />
@@ -1292,6 +1457,10 @@
       <recent name="com.reception.controller.command.user.addRequestToDesign" />
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+>>>>>>> parent of f48f517... version from 01/05/2018
       <recent name="com.reception.controller.command.UserCommand.AddRequestToBuildingCommand" />
       <recent name="com.reception.controller.command.UserCommand.AddRequestToExploatationCommand" />
       <recent name="com.reception.controller.command.UserCommand.AddRequestToRepairCommand" />
@@ -1301,6 +1470,7 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\java\com\reception\controller\command" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\resources" />
 =======
       <recent name="com.reception.dao.impl.qw" />
@@ -1308,6 +1478,12 @@
       <recent name="com.reception.dao.impl" />
       <recent name="com.reception.dao.factory" />
       <recent name="com.reception.service.impl" />
+=======
+      <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\js" />
+      <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\WEB-INF\jsp\BasePages" />
+      <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\WEB-INF\js" />
+      <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\java\com\reception\service\validator\impl" />
+>>>>>>> parent of f48f517... version from 01/05/2018
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\EPAM_Tasks\Final_Web_Project\src\main\webapp\WEB-INF\jsp\BasePages" />
@@ -1338,10 +1514,14 @@
   </component>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.RegistrationCommand">
 =======
   <component name="RunManager" selected="Tomcat Server.TOM">
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+  <component name="RunManager" selected="Tomcat Server.newtom">
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
   <component name="RunManager" selected="Tomcat Server.newtom">
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -1818,6 +1998,7 @@
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.newtom" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <item index="3" class="java.lang.String" itemvalue="JUnit.RegistrationValidatorTest.when_put_email_without_domain_separator_symbol_then_should_return_increased_at_one_llist" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.RegistrationValidatorTest.when_put_email_without_domain_then_should_return_increased_at_one_llist" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.RegistrationValidatorTest.when_put_correct_email_then_should_return_unchanged_list" />
@@ -1832,11 +2013,16 @@
       <item index="6" class="java.lang.String" itemvalue="Tomcat Server.Main.jsp (1)" />
 >>>>>>> parent of 0ef4810... version 20/04/18
 =======
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
       <item index="3" class="java.lang.String" itemvalue="Application.ConnectionToDB" />
       <item index="4" class="java.lang.String" itemvalue="Application.NewUserToDB" />
       <item index="5" class="java.lang.String" itemvalue="Application.UserDAOImpl" />
       <item index="6" class="java.lang.String" itemvalue="Tomcat Server.Main.jsp" />
       <item index="7" class="java.lang.String" itemvalue="Tomcat Server.Main.jsp (1)" />
+<<<<<<< HEAD
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
 >>>>>>> parent of f48f517... version from 01/05/2018
     </list>
     <recent_temporary>
@@ -1903,6 +2089,7 @@
       <workItem from="1523890961769" duration="2248000" />
       <workItem from="1524172878696" duration="647000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1524222098927" duration="376000" />
       <workItem from="1524323462094" duration="330000" />
       <workItem from="1524487451233" duration="68000" />
@@ -1916,16 +2103,23 @@
 =======
       <workItem from="1524222098927" duration="190000" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+      <workItem from="1524222098927" duration="190000" />
+>>>>>>> parent of f48f517... version from 01/05/2018
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="311244000" />
 =======
     <option name="totallyTimeSpent" value="264925000" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+    <option name="totallyTimeSpent" value="278113000" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
     <option name="totallyTimeSpent" value="278113000" />
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -1942,7 +2136,11 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
     <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -1963,6 +2161,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1974,6 +2173,13 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20179948" sideWeight="0.4899329" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5852349" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2570694" sideWeight="0.4899329" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5852349" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -2017,6 +2223,7 @@
   <component name="editorHistoryManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/registration_ru.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/local_ru.properties">
       <provider editor-type-id="ResourceBundle">
@@ -2030,6 +2237,8 @@
     </entry>
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
     <entry file="file://$PROJECT_DIR$/src/main/webapp/User/UserBP.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -2040,6 +2249,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/userCommand/MechanicalFacultyCommand/AddRequestToExploatationCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/userCommand/MechanicalFacultyCommand/AddRequestToRepairCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/impl/RequestsDAOImpl.java">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-990">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
@@ -2254,11 +2464,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/errorPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/Admin/ApprovedRequestsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/Admin/GetRequestCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="24" column="101" lean-forward="false" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/Admin/GetResultCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="41" column="62" lean-forward="false" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/userCommand/ArchitectureFcultyCommand/AddRequestToBuildingCommand.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/userCommand/ArchitectureFcultyCommand/AddRequestToDesignCommand.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/RegistrationCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/factory/DAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/WrappedConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/LogOutCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/AdminMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/RequestPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/ResultPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Admin/Users.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/errorPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of f48f517... version from 01/05/2018
         <state relative-caret-position="44">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/JDBCconfig.properties">
 =======
@@ -2306,6 +2613,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/basePage.jsp">
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/RegBP.jsp">
+>>>>>>> parent of f48f517... version from 01/05/2018
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3542">
           <caret line="161" column="68" lean-forward="false" selection-start-line="161" selection-start-column="68" selection-end-line="161" selection-end-column="68" />
@@ -2335,7 +2645,11 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/ConnectionPoolImpl.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Request.jsp">
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Request.jsp">
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -2398,6 +2712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/ConnectionPoolImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="567">
           <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
@@ -2484,6 +2799,17 @@
         <state relative-caret-position="44">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+        <state relative-caret-position="628">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/dao/impl/connectionPool/JDBCProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+>>>>>>> parent of f48f517... version from 01/05/2018
         </state>
       </provider>
     </entry>
@@ -2506,6 +2832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -2599,13 +2926,42 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToBuildingCommand/AddRequestToBuildingCommand.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToRepairCommand/MechRepairCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToExploatationCommand/MechExploatationCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToDesignCommand/ArchDesignCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> parent of f48f517... version from 01/05/2018
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/user/addRequestToRepair/MechRepairCommand.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/ArchBuildingCommand.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToBuildingCommand/ArchBuildingCommand.java">
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/ArchBuildingCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/AddRequestToBuildingCommand/ArchBuildingCommand.java">
@@ -2620,6 +2976,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="695">
           <caret line="96" column="29" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="29" />
 =======
@@ -2631,10 +2988,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> parent of f48f517... version from 01/05/2018
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/RegistrationPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -2726,10 +3088,41 @@
         <state relative-caret-position="814">
           <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/CommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="96" lean-forward="false" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="96" />
+          <folding>
+            <element signature="e#2007#2008#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/project.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/UserCommand/GetResultCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+>>>>>>> parent of f48f517... version from 01/05/2018
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/GoToRegistrationCommand.java">
@@ -2748,6 +3141,12 @@
         <state relative-caret-position="3212">
           <caret line="146" column="39" lean-forward="false" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/BasePages/basePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3212">
+          <caret line="146" column="39" lean-forward="false" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+>>>>>>> parent of f48f517... version from 01/05/2018
           <folding />
         </state>
       </provider>
@@ -2756,6 +3155,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/AdminSendResultPageCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/GoToRegistrationCommand.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="681">
@@ -2768,10 +3168,15 @@
         <state relative-caret-position="704">
           <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
 >>>>>>> parent of f48f517... version from 01/05/2018
+=======
+        <state relative-caret-position="704">
+          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+>>>>>>> parent of f48f517... version from 01/05/2018
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/controller/command/LogOutCommand.java">
@@ -2817,10 +3222,29 @@
           <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
+=======
+    <entry file="das://table:/ded4d256/f117e6ad-202d-4ed7-b8b1-1e78d24e89f7/receptioncompany.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/reception/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/user.properties">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle">
+        <state />
+>>>>>>> parent of f48f517... version from 01/05/2018
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="220">
           <caret line="10" column="5" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
           <folding />
@@ -2856,6 +3280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/Result.jsp">
       <provider selected="true" editor-type-id="text-editor">
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
         <state relative-caret-position="650">
           <caret line="82" column="96" lean-forward="false" selection-start-line="82" selection-start-column="96" selection-end-line="82" selection-end-column="96" />
           <folding />

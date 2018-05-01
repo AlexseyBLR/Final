@@ -2,6 +2,7 @@ package com.reception.controller.command;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reception.controller.command.user.addRequestToBuilding.ArchBuildingCommand;
 import com.reception.controller.command.user.addRequestToDesign.ArchDesignCommand;
 import com.reception.controller.command.user.addRequestToExploatation.MechExploatationCommand;
@@ -23,6 +24,8 @@ import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.Mec
 import com.reception.controller.command.UserCommand.MechanicalFacultyCommand.MechRepairCommand;
 >>>>>>> parent of 0ef4810... version 20/04/18
 =======
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 import com.reception.controller.command.Admin.ApprovedRequestsCommand;
 import com.reception.controller.command.Admin.GetResultCommand;
 import com.reception.controller.command.Admin.GetUsersCommand;
@@ -33,6 +36,9 @@ import com.reception.controller.command.UserCommand.AddRequestToExploatationComm
 import com.reception.controller.command.UserCommand.AddRequestToRepairCommand.MechRepairCommand;
 
 
+<<<<<<< HEAD
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
 >>>>>>> parent of f48f517... version from 01/05/2018
 
 import java.util.HashMap;
@@ -62,6 +68,7 @@ public final class CommandProvider {
         commandMap.put("showResultToUser", new com.reception.controller.command.UserCommand.GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
 <<<<<<< HEAD
+<<<<<<< HEAD
         commandMap.put("updateInfo", new UpdateUserInfoCommand());
 =======
         commandMap.put("showResult", new ShowResultCommand());
@@ -69,6 +76,9 @@ public final class CommandProvider {
         commandMap.put("showUsers", new ShowUsersCommand());
 
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 
 >>>>>>> parent of f48f517... version from 01/05/2018

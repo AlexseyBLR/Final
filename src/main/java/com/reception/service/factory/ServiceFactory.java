@@ -12,6 +12,10 @@ public class ServiceFactory {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 
 >>>>>>> parent of f48f517... version from 01/05/2018
@@ -23,13 +27,15 @@ public class ServiceFactory {
 
     private final ResultService resultService = new ResultServiceImpl();
 
-
     private ServiceFactory() {
     }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
     public UserService getUserService() {

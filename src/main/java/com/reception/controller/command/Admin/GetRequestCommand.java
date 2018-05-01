@@ -15,10 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+<<<<<<< HEAD:src/main/java/com/reception/controller/command/Admin/GetRequestCommand.java
 <<<<<<< HEAD:src/main/java/com/reception/controller/command/adminCommand/GetRequestCommand.java
 <<<<<<< HEAD:src/main/java/com/reception/controller/command/adminCommand/GetRequestCommand.java
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018:src/main/java/com/reception/controller/command/Admin/GetRequestCommand.java
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018:src/main/java/com/reception/controller/command/Admin/GetRequestCommand.java
 public class GetRequestCommand implements Command {

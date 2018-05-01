@@ -199,10 +199,14 @@ public class UserDAOImpl implements UserDAO {
     @Override
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public boolean update(User user) throws DAOException {
 =======
     public void update(NewUser user) throws DAOException {
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+    public void update(User user) throws DAOException {
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
     public void update(User user) throws DAOException {
 >>>>>>> parent of f48f517... version from 01/05/2018

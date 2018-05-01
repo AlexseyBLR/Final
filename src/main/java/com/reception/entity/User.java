@@ -18,8 +18,11 @@ public class NewUser {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public User(){}
 
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
     public User(String first_name, String last_name, String patronymic, String email,
@@ -141,6 +144,7 @@ public class NewUser {
         if (this == o) return true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!(o instanceof User)) return false;
         User user = (User) o;
         return getMathResult() == user.getMathResult() &&
@@ -171,6 +175,10 @@ public class NewUser {
 =======
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
+=======
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+>>>>>>> parent of f48f517... version from 01/05/2018
         return Objects.equals(first_name, user.first_name) &&
                 Objects.equals(last_name, user.last_name) &&
                 Objects.equals(patronymic, user.patronymic) &&
@@ -181,6 +189,9 @@ public class NewUser {
                 Objects.equals(physResult, user.physResult) &&
                 Objects.equals(langResult, user.langResult) &&
                 Objects.equals(sertResult, user.sertResult);
+<<<<<<< HEAD
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
 >>>>>>> parent of f48f517... version from 01/05/2018
     }
 
