@@ -15,31 +15,26 @@ import java.util.List;
 import static com.reception.controller.constant.Constant.ResultProperty;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
-public class GetResultCommand implements Command {
+public class ShowResultCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
     private final ResultService resultService = factory.getResultService();
-    private final static Logger logger = Logger.getLogger(GetResultCommand.class);
+    private final static Logger logger = Logger.getLogger(UsersRequestCommand.class);
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
 
-        List<UserRequest> listME = null;
-        List<UserRequest> listMR = null;
-        List<UserRequest> listAD = null;
-        List<UserRequest> listAB = null;
-        try {
-            listME = resultService.getResult(ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
-            listMR = resultService.getResult(ResultProperty.MECHANICAL_REPAIR_FACULTY);
-            listAD = resultService.getResult(ResultProperty.ARCHITECTURE_DESIGN_FACULTY);
-            listAB = resultService.getResult(ResultProperty.ARCHITECTURE_BUILDING_FACULTY);
-        } catch (DAOException e) {
-            e.printStackTrace();
-        }
+        List<UserRequest> listME = resultService.getResult(ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
         request.getSession().setAttribute("resultME", listME);
+
+        List<UserRequest> listMR = resultService.getResult(ResultProperty.MECHANICAL_REPAIR_FACULTY);
         request.getSession().setAttribute("resultMR", listMR);
+
+        List<UserRequest> listAD = resultService.getResult(ResultProperty.ARCHITECTURE_DESIGN_FACULTY);
         request.getSession().setAttribute("resultAD", listAD);
+
+        List<UserRequest> listAB = resultService.getResult(ResultProperty.ARCHITECTURE_BUILDING_FACULTY);
         request.getSession().setAttribute("resultAB", listAB);
 
 

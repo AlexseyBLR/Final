@@ -2,11 +2,12 @@ package com.reception.dao.impl;
 
 
 import com.reception.dao.UserDAO;
+import com.reception.dao.exception.ConnectionPoolException;
 import com.reception.dao.exception.DAOException;
 import com.reception.dao.impl.connectionPool.ConnectionPool;
 import com.reception.dao.impl.connectionPool.ConnectionPoolImpl;
 import com.reception.dao.impl.connectionPool.WrappedConnection;
-import com.reception.entity.User;
+import com.reception.entity.NewUser;
 import org.apache.log4j.Logger;
 
 import java.sql.PreparedStatement;
@@ -63,7 +64,7 @@ public class UserDAOImpl implements UserDAO {
 
     
     @Override
-    public boolean save(User user) throws DAOException {
+    public boolean save(NewUser user) throws DAOException {
 
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_SAVE_PREPARED_STATEMENT)
@@ -88,16 +89,16 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User findCustomerByEmailAndPassword(String email, String password) throws DAOException {
+    public NewUser findCustomerByEmailAndPassword(String email, String password) throws DAOException {
         return null;
     }
 
 
     @Override
-    public List<User> getAll() throws DAOException {
+    public List<NewUser> getAllUsers() throws DAOException {
 
-        List<User> customers = new ArrayList<>();
-        User user = null;
+        List<NewUser> customers = new ArrayList<>();
+        NewUser user = null;
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             Statement statement = connection.createStatement()){
             ResultSet rs = statement.executeQuery(SELECT_ALL_SQL);
@@ -113,7 +114,7 @@ public class UserDAOImpl implements UserDAO {
                 int langResult = Integer.parseInt(rs.getString(LANG_COLUMN_INDEX));
                 int sertResult = Integer.parseInt(rs.getString(SERT_COLUMN_INDEX));
                 String role = rs.getString(ROLE_COLUMN_INDEX);
-                user = new User(
+                user = new NewUser(
                         firstName,lastName,patronymic,email,password,
                         phone,mathResult, physResult, langResult, sertResult, role
                 );
@@ -121,16 +122,16 @@ public class UserDAOImpl implements UserDAO {
             }
             return customers;
         } catch (SQLException e) {
-            logger.error("Exception from DAO , getAll customers  method",e);
-            throw new DAOException("getAll customers  method",e);
+            logger.error("Exception from DAO , getAllUsers customers  method",e);
+            throw new DAOException("getAllUsers customers  method",e);
         }
 
     }
 
 
     @Override
-    public User find(String email, String password) throws DAOException {
-        User user = null;
+    public NewUser findCustomerByEmailAndPw(String email, String password) throws DAOException {
+        NewUser user = null;
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(FIND_BY_EMAIL_AND_PW_SQL_STATEMENT))
         {
@@ -148,9 +149,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User get(String email) throws DAOException {
+    public NewUser get(String email) throws DAOException {
 
-        User user = null;
+        NewUser user = null;
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_GET_PREPARED_STATEMENT)
         ){
@@ -166,8 +167,8 @@ public class UserDAOImpl implements UserDAO {
     }
 
 
-    private User buildNewUser(ResultSet rs) throws DAOException {
-        User user = null;
+    private NewUser buildNewUser(ResultSet rs) throws DAOException {
+        NewUser user = null;
         try {
             while (rs.next()) {
                 String firstName = rs.getString(NAME_COLUMN_INDEX);
@@ -181,7 +182,7 @@ public class UserDAOImpl implements UserDAO {
                 int langResult = Integer.parseInt(rs.getString(LANG_COLUMN_INDEX));
                 int sertResult = Integer.parseInt(rs.getString(SERT_COLUMN_INDEX));
                 String role = rs.getString(ROLE_COLUMN_INDEX);
-                user = new User(
+                user = new NewUser(
                         firstName,lastName,patronymic,email,password,
                         phone,mathResult, physResult, langResult, sertResult, role
                 );
@@ -196,7 +197,11 @@ public class UserDAOImpl implements UserDAO {
 
 
     @Override
+<<<<<<< HEAD
     public boolean update(User user) throws DAOException {
+=======
+    public void update(NewUser user) throws DAOException {
+>>>>>>> parent of 0ef4810... version 20/04/18
 
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_UPDATE_PREPARED_STATEMENT)
@@ -218,7 +223,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
 
-    public void delete(User user) throws DAOException {
+    public void delete(NewUser user) throws DAOException {
 
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_DELETE_PREPARED_STATEMENT)

@@ -18,6 +18,7 @@ public class Constant {
 
     public static class  WebProperty {
 
+<<<<<<< HEAD
         public final static String PAGE_USER = "/home";
         public final static String PAGE_REGISTRATION = "/registration";
         public final static String PAGE_ERROR = "/error";
@@ -34,6 +35,18 @@ public class Constant {
         public final static String HIDDEN_PARAMETER = "command";
 
 
+=======
+        public final static String PAGE_CUSTOMER = "/account";
+        public final static String PAGE_ADMIN = "/admin/account";
+        public final static String PAGE_ERROR = "/error";
+        public final static String PAGE_CUSTOMER_LIST = "/admin/customers";
+        public final static String PAGE_REGISTRATION = "/registration";
+        public final static String PAGE_PRODUCT_SETTING = "/admin/product/setting?id=";
+        public final static String PAGE_MAIN = "/home";
+        public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
+        public final static String PAGE_LOGIN = "/login";
+        public final static String PAGE_PRODUCT = "/product";
+>>>>>>> parent of 0ef4810... version 20/04/18
     }
 
     public static class RequestProperty {

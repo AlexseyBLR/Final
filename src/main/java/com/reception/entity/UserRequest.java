@@ -2,7 +2,7 @@ package com.reception.entity;
 
 import java.util.Objects;
 
-public class UserRequest {
+public class ResultForRequest {
 
     private String FIO;
     private int mathResult;
@@ -12,11 +12,15 @@ public class UserRequest {
     private String facSpec;
     private String status;
 
+<<<<<<< HEAD
     public UserRequest(){
 
     }
 
     public UserRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
+=======
+    public ResultForRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
+>>>>>>> parent of 0ef4810... version 20/04/18
         this.FIO = FIO;
         this.mathResult = mathResult;
         this.physResult = physResult;
@@ -84,8 +88,8 @@ public class UserRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof UserRequest)) return false;
-        UserRequest that = (UserRequest) o;
+        if (!(o instanceof ResultForRequest)) return false;
+        ResultForRequest that = (ResultForRequest) o;
         return getMathResult() == that.getMathResult() &&
                 getPhysResult() == that.getPhysResult() &&
                 getLangResult() == that.getLangResult() &&
@@ -103,7 +107,7 @@ public class UserRequest {
 
     @Override
     public String toString() {
-        return "UserRequest{" +
+        return "ResultForRequest{" +
                 "FIO='" + FIO + '\'' +
                 ", mathResult=" + mathResult +
                 ", physResult=" + physResult +

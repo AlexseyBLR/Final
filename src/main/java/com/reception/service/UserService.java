@@ -5,7 +5,7 @@ import com.reception.service.exception.ServiceException;
 
 import java.util.List;
 
-public interface UserService {
+public interface CustomerService {
 
     boolean saveCustomer(User customer) throws ServiceException;
 

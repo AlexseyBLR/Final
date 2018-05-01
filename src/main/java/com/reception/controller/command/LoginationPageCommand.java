@@ -1,8 +1,9 @@
 package com.reception.controller.command;
 
 import com.reception.controller.exception.ControllerException;
+import com.reception.entity.NewUser;
 import com.reception.entity.User;
-import com.reception.service.UserService;
+import com.reception.service.CustomerService;
 import com.reception.service.exception.ServiceException;
 import com.reception.service.exception.ValidatorException;
 import com.reception.service.factory.ServiceFactory;
@@ -10,7 +11,11 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN;
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER;
@@ -18,12 +23,12 @@ import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER;
 public class LoginationPageCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
-    private final UserService service = factory.getUserService();
+    private final CustomerService service = factory.getCustomerService();
     private final static Logger logger = Logger.getLogger(LoginationPageCommand.class);
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ControllerException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
         String email = null;
         String password = null;
@@ -32,8 +37,8 @@ public class LoginationPageCommand implements Command {
             email = request.getParameter("email");
             password = request.getParameter("password");
 
-            User user = service.findUserByEmailAndPassword(email, password);
-            if (user != null) {
+            NewUser user = service.findUserByEmailAndPassword(email, password);
+            if (user != null| !email.equals("")) {
                 request.getSession().setAttribute("userFIO", user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
                 request.getSession().setAttribute("mathResult", user.getMathResult());
                 request.getSession().setAttribute("physResult", user.getPhysResult());
@@ -41,7 +46,12 @@ public class LoginationPageCommand implements Command {
                 request.getSession().setAttribute("sertResult", user.getSertResult());
                 request.getSession().setAttribute("role", user.getRole());
                 if (user.getRole().equals("user")) {
+<<<<<<< HEAD
                     response.sendRedirect(PAGE_USER);
+=======
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/User/UserMain.jsp");
+                    dispatcher.forward(request, response);
+>>>>>>> parent of 0ef4810... version 20/04/18
                 }
                 if (user.getRole().equals("admin")) {
                     response.sendRedirect(PAGE_ADMIN);

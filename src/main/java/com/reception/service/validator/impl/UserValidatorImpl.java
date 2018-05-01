@@ -2,9 +2,18 @@ package com.reception.service.validator.impl;
 
 
 import com.reception.controller.constant.Constant;
+<<<<<<< HEAD
 import com.reception.entity.User;
 import com.reception.service.validator.UserValidator;
+=======
+import com.reception.entity.NewUser;
+import com.reception.service.exception.ValidatorException;
+import com.reception.service.validator.CustomerValidator;
+>>>>>>> parent of 0ef4810... version 20/04/18
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -12,7 +21,11 @@ import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 
+<<<<<<< HEAD
 public class UserValidatorImpl extends AbstractValidator implements UserValidator<User> {
+=======
+public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<NewUser> {
+>>>>>>> parent of 0ef4810... version 20/04/18
 
     private static final String EMAIL_REG_EXP = "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
 
@@ -32,7 +45,7 @@ public class UserValidatorImpl extends AbstractValidator implements UserValidato
 
     private static final Pattern RESULT_PATTER = Pattern.compile(RESULT_REG_EXP);
 
-    private final Map<String, Predicate<User>> dispathcer = new HashMap<>();
+    private final Map<String, Predicate<NewUser>> dispathcer = new HashMap<>();
 
 
     public UserValidatorImpl() {
@@ -52,7 +65,7 @@ public class UserValidatorImpl extends AbstractValidator implements UserValidato
 
 
     @Override
-    public boolean validate(User user) {
+    public boolean validate(NewUser user) {
         AtomicBoolean result = new AtomicBoolean(true);
         dispathcer.forEach((key, value) -> {
             if (!dispathcer.get(key).test(user)) {
@@ -73,64 +86,64 @@ public class UserValidatorImpl extends AbstractValidator implements UserValidato
         }
     }
 
-    private Predicate<User> checkMathResult() {
+    private Predicate<NewUser> checkMathResult() {
         return (user) -> !this.isEmptyOrNull(String.valueOf(user.getMathResult()))
                 &&
                 this.matchesPattern(RESULT_PATTER, String.valueOf(user.getMathResult()));
     }
 
-    private Predicate<User> checkPhysResult() {
+    private Predicate<NewUser> checkPhysResult() {
         return (user) -> !this.isEmptyOrNull(String.valueOf(user.getPhysResult()))
                 &&
                 this.matchesPattern(RESULT_PATTER, String.valueOf(user.getPhysResult()));
     }
 
-    private Predicate<User> checkLangResult() {
+    private Predicate<NewUser> checkLangResult() {
         return (user) -> !this.isEmptyOrNull(String.valueOf(user.getLangResult()))
                 &&
                 this.matchesPattern(RESULT_PATTER, String.valueOf(user.getLangResult()));
     }
 
-    private Predicate<User> checkSertResult() {
+    private Predicate<NewUser> checkSertResult() {
         return (user) -> !this.isEmptyOrNull(String.valueOf(user.getSertResult()))
                 &&
                 this.matchesPattern(RESULT_PATTER, String.valueOf(user.getSertResult()));
     }
 
-    private Predicate<User> checkPatronymicResult() {
+    private Predicate<NewUser> checkPatronymicResult() {
         return (user) -> !this.isEmptyOrNull(user.getPatronymic())
                 &&
                 this.matchesPattern(NAME_PATTER, user.getPatronymic());
     }
 
 
-    private Predicate<User> checkFirstName() {
+    private Predicate<NewUser> checkFirstName() {
         return (user) -> !this.isEmptyOrNull(user.getFirst_name())
                 &&
                 this.matchesPattern(NAME_PATTER, user.getFirst_name());
     }
 
-    private Predicate<User> checkLastName() {
+    private Predicate<NewUser> checkLastName() {
         return (user) -> !this.isEmptyOrNull(user.getLast_name())
                 &&
                 this.matchesPattern(NAME_PATTER, user.getLast_name());
     }
 
 
-    private Predicate<User> checkEmail() {
+    private Predicate<NewUser> checkEmail() {
         return (user) -> !this.isEmptyOrNull(user.getEmail())
                 &&
                 this.matchesPattern(EMAIL_PATTERN, user.getEmail());
     }
 
-    private Predicate<User> checkPhone() {
+    private Predicate<NewUser> checkPhone() {
         return (user) -> !this.isEmptyOrNull(user.getPhoneNumber())
                 &&
                 this.matchesPattern(PHONE_NUMBER_PATTERN, user.getPhoneNumber());
     }
 
 
-    private Predicate<User> checkPassword() {
+    private Predicate<NewUser> checkPassword() {
         return (user) -> !this.isEmptyOrNull(user.getPassword());
 
     }

@@ -1,18 +1,19 @@
 package com.reception.dao;
 
 import com.reception.dao.exception.DAOException;
-import com.reception.entity.UserRequest;
+import com.reception.entity.NewUser;
+import com.reception.entity.ResultForRequest;
 
 import java.util.List;
 
 public interface ResultDAO {
 
-    boolean addResult(UserRequest request) throws DAOException;
+    boolean addResult(ResultForRequest resultForRequest) throws DAOException;
 
-    List<UserRequest> getAll() throws DAOException;
+    List<ResultForRequest> getAll() throws DAOException;
 
-    public void updateUsers(UserRequest request) throws DAOException;
+    public void updateUsers(ResultForRequest resultForRequest) throws DAOException;
 
-    List<UserRequest> getEnlistedUsers(String facultySpeciality) throws DAOException;
+    List<ResultForRequest> getEnlistedUsers(String facultySpeciality) throws DAOException;
 
 }

@@ -2,7 +2,7 @@ package com.reception.entity;
 
 import java.util.Objects;
 
-public class User {
+public class NewUser {
 
     private String first_name;
     private String last_name;
@@ -16,11 +16,17 @@ public class User {
     private int sertResult;
     private String role;
 
+<<<<<<< HEAD
     public User(){}
 
     public User(String first_name, String last_name, String patronymic, String email,
                 String password, String phoneNumber, int mathResult,
                 int physResult, int langResult, int sertResult, String role) {
+=======
+    public NewUser(String first_name, String last_name, String patronymic, String email,
+                   String password, String phoneNumber, int mathResult,
+                   int physResult, int langResult, int sertResult, String role) {
+>>>>>>> parent of 0ef4810... version 20/04/18
 
         this.first_name = first_name;
         this.last_name = last_name;
@@ -129,6 +135,7 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+<<<<<<< HEAD
         if (!(o instanceof User)) return false;
         User user = (User) o;
         return getMathResult() == user.getMathResult() &&
@@ -142,6 +149,20 @@ public class User {
                 Objects.equals(getPassword(), user.getPassword()) &&
                 Objects.equals(getPhoneNumber(), user.getPhoneNumber()) &&
                 Objects.equals(getRole(), user.getRole());
+=======
+        if (o == null || getClass() != o.getClass()) return false;
+        NewUser newUser = (NewUser) o;
+        return Objects.equals(first_name, newUser.first_name) &&
+                Objects.equals(last_name, newUser.last_name) &&
+                Objects.equals(patronymic, newUser.patronymic) &&
+                Objects.equals(email, newUser.email) &&
+                Objects.equals(password, newUser.password) &&
+                Objects.equals(phoneNumber, newUser.phoneNumber) &&
+                Objects.equals(mathResult, newUser.mathResult) &&
+                Objects.equals(physResult, newUser.physResult) &&
+                Objects.equals(langResult, newUser.langResult) &&
+                Objects.equals(sertResult, newUser.sertResult);
+>>>>>>> parent of 0ef4810... version 20/04/18
     }
 
     @Override
@@ -152,7 +173,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "NewUser{" +
                 "first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", patronymic='" + patronymic + '\'' +

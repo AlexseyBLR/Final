@@ -10,12 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+<<<<<<< HEAD
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
 
 public class RegistrationCommand extends Thread implements Command {
 
+=======
+public class RegistrationPageCommand implements Command {
+>>>>>>> parent of 0ef4810... version 20/04/18
 
-    private final static Logger logger = Logger.getLogger(RegistrationCommand.class);
+    private final static Logger logger = Logger.getLogger(RegistrationPageCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
     private UserService service = factory.getUserService();
 
@@ -33,7 +37,7 @@ public class RegistrationCommand extends Thread implements Command {
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
             String firstName = request.getParameter(FIRST_NAME_PARAMETER);
             String lastName = request.getParameter(LAST_NAME_PARAMETER);
@@ -55,7 +59,12 @@ public class RegistrationCommand extends Thread implements Command {
             if(result==true){
                 response.sendRedirect("/index.jsp");
             }else {
+<<<<<<< HEAD
                 response.sendRedirect(PAGE_REGISTRATION);
+=======
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
+                dispatcher.forward(request, response);
+>>>>>>> parent of 0ef4810... version 20/04/18
             }
 
         }catch (ServiceException | IOException | RuntimeException e) {
