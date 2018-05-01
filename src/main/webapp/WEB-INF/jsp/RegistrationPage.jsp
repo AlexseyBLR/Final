@@ -119,12 +119,16 @@
             <input class="btn btn-primary" style="margin-top: 30px; margin-left: 100px" type="submit" value=
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <fmt:message key="local.toRegister"/>
 =======
 
 
             <input class="btn btn-primary" style="margin-top: 30px; margin-left: 100px" type="submit" value=<fmt:message key="local.toRegister"/> />
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+                    <fmt:message key="local.toRegister"/>/>
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
                     <fmt:message key="local.toRegister"/>/>
 >>>>>>> parent of f48f517... version from 01/05/2018

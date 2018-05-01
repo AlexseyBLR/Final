@@ -13,7 +13,12 @@ public class ServiceFactory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+    private final UserService userService = new UserServiceImpl();
+>>>>>>> parent of f48f517... version from 01/05/2018
 
 >>>>>>> parent of f48f517... version from 01/05/2018
 =======
@@ -22,6 +27,7 @@ public class ServiceFactory {
     private final UserService userService = new UserServiceImpl();
 =======
 
+<<<<<<< HEAD
     private final CustomerService customerService = new UserServiceImpl();
 >>>>>>> parent of 0ef4810... version 20/04/18
 
@@ -37,6 +43,11 @@ public class ServiceFactory {
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
 =======
+>>>>>>> parent of f48f517... version from 01/05/2018
+=======
+    private ServiceFactory() {
+    }
+
 >>>>>>> parent of f48f517... version from 01/05/2018
     public UserService getUserService() {
         return userService;

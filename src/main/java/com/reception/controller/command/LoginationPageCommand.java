@@ -17,9 +17,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+=======
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
 >>>>>>> parent of f48f517... version from 01/05/2018
 
@@ -52,11 +55,15 @@ public class LoginationPageCommand implements Command {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     response.sendRedirect(PAGE_USER);
 =======
                     RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/User/UserMain.jsp");
                     dispatcher.forward(request, response);
 >>>>>>> parent of 0ef4810... version 20/04/18
+=======
+                    response.sendRedirect("/home");
+>>>>>>> parent of f48f517... version from 01/05/2018
 =======
                     response.sendRedirect("/home");
 >>>>>>> parent of f48f517... version from 01/05/2018
