@@ -6,13 +6,14 @@ import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class RegistrationCommand implements Command {
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
+
+public class RegistrationCommand extends Thread implements Command {
+
 
     private final static Logger logger = Logger.getLogger(RegistrationCommand.class);
     private ServiceFactory factory = ServiceFactory.getInstance();
@@ -54,7 +55,7 @@ public class RegistrationCommand implements Command {
             if(result==true){
                 response.sendRedirect("/index.jsp");
             }else {
-                response.sendRedirect("/registration");
+                response.sendRedirect(PAGE_REGISTRATION);
             }
 
         }catch (ServiceException | IOException | RuntimeException e) {

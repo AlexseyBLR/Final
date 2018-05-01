@@ -16,6 +16,8 @@ public class User {
     private int sertResult;
     private String role;
 
+    public User(){}
+
     public User(String first_name, String last_name, String patronymic, String email,
                 String password, String phoneNumber, int mathResult,
                 int physResult, int langResult, int sertResult, String role) {
@@ -124,28 +126,28 @@ public class User {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof User)) return false;
         User user = (User) o;
-        return Objects.equals(first_name, user.first_name) &&
-                Objects.equals(last_name, user.last_name) &&
-                Objects.equals(patronymic, user.patronymic) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(phoneNumber, user.phoneNumber) &&
-                Objects.equals(mathResult, user.mathResult) &&
-                Objects.equals(physResult, user.physResult) &&
-                Objects.equals(langResult, user.langResult) &&
-                Objects.equals(sertResult, user.sertResult);
+        return getMathResult() == user.getMathResult() &&
+                getPhysResult() == user.getPhysResult() &&
+                getLangResult() == user.getLangResult() &&
+                getSertResult() == user.getSertResult() &&
+                Objects.equals(getFirst_name(), user.getFirst_name()) &&
+                Objects.equals(getLast_name(), user.getLast_name()) &&
+                Objects.equals(getPatronymic(), user.getPatronymic()) &&
+                Objects.equals(getEmail(), user.getEmail()) &&
+                Objects.equals(getPassword(), user.getPassword()) &&
+                Objects.equals(getPhoneNumber(), user.getPhoneNumber()) &&
+                Objects.equals(getRole(), user.getRole());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(first_name, last_name, patronymic, email, password, phoneNumber, mathResult, physResult, langResult, sertResult);
+        return Objects.hash(getFirst_name(), getLast_name(), getPatronymic(), getEmail(), getPassword(), getPhoneNumber(), getMathResult(), getPhysResult(), getLangResult(), getSertResult(), getRole());
     }
 
     @Override

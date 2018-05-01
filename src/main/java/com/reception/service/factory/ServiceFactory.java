@@ -10,14 +10,15 @@ public class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
 
-
     private final UserService userService = new UserServiceImpl();
 
     private final ResultService resultService = new ResultServiceImpl();
 
 
+
     private ServiceFactory() {
     }
+
 
     public UserService getUserService() {
         return userService;

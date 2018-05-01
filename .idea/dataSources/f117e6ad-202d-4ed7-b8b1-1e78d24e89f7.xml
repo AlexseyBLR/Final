@@ -915,7 +915,7 @@
     <table id="230" parent="6" name="requests">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="231" parent="6" name="specialty">
+    <table id="231" parent="6" name="speciality">
       <Engine>InnoDB</Engine>
     </table>
     <table id="232" parent="6" name="user">
@@ -927,147 +927,139 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="234" parent="229" name="name_UNIQUE">
+    <index id="234" parent="229" name="key_idx">
       <ColNames>name</ColNames>
-      <Unique>1</Unique>
     </index>
-    <key id="235" parent="229" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>name</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="236" parent="229" name="name_UNIQUE">
-      <ColNames>name</ColNames>
-      <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="237" parent="230" name="FIO">
+    <column id="235" parent="230" name="FIO">
       <Position>1</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="230" name="Mresult">
+    <column id="236" parent="230" name="Mresult">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="230" name="Phresilt">
+    <column id="237" parent="230" name="Phresilt">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="230" name="Lresult">
+    <column id="238" parent="230" name="Lresult">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="230" name="Sresult">
+    <column id="239" parent="230" name="Sresult">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="230" name="status">
+    <column id="240" parent="230" name="status">
       <Position>6</Position>
       <DataType>enum(&apos;accepted&apos;, &apos;applied&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="230" name="faculty_speciality">
+    <column id="241" parent="230" name="faculty_speciality">
       <Position>7</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="231" name="faculty">
+    <column id="242" parent="231" name="faculty">
       <Position>1</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="231" name="specialty_name">
+    <column id="243" parent="231" name="speciality_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="231" name="set_plan">
+    <column id="244" parent="231" name="set_paln">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="247" parent="231" name="faculty_key_idx">
+    <index id="245" parent="231" name="key_idx">
       <ColNames>faculty</ColNames>
     </index>
-    <foreign-key id="248" parent="231" name="faculty_key">
+    <foreign-key id="246" parent="231" name="key">
       <ColNames>faculty</ColNames>
       <RefSchemaName>receptioncompany</RefSchemaName>
       <RefTableName>faculty</RefTableName>
       <RefColNames>name</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="249" parent="232" name="first_name">
+    <column id="247" parent="232" name="first_name">
       <Position>1</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="232" name="last_name">
+    <column id="248" parent="232" name="last_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="232" name="patronymic">
+    <column id="249" parent="232" name="patronymic">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="232" name="email">
+    <column id="250" parent="232" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="232" name="password">
+    <column id="251" parent="232" name="password">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="232" name="phone_number">
+    <column id="252" parent="232" name="phone_number">
       <Position>6</Position>
       <DataType>varchar(17)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="232" name="Math_result">
+    <column id="253" parent="232" name="Math_result">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="232" name="Phys_result">
+    <column id="254" parent="232" name="Phys_result">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="232" name="Lang_result">
+    <column id="255" parent="232" name="Lang_result">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="232" name="Sert_result">
+    <column id="256" parent="232" name="Sert_result">
       <Position>10</Position>
       <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="232" name="role">
+    <column id="257" parent="232" name="role">
       <Position>11</Position>
       <DataType>enum(&apos;user&apos;, &apos;admin&apos;)|0</DataType>
       <NotNull>1</NotNull>

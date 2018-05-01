@@ -139,7 +139,7 @@
 
 
             <input class="btn btn-primary" style="margin-top: 30px; margin-left: 100px" type="submit" value=
-                    <fmt:message key="local.toRegister"/>/>
+                    <fmt:message key="local.toRegister"/>
         </form>
     </div>
 

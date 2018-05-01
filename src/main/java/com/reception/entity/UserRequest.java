@@ -12,6 +12,10 @@ public class UserRequest {
     private String facSpec;
     private String status;
 
+    public UserRequest(){
+
+    }
+
     public UserRequest(String FIO, int mathResult, int physResult, int langResult, int sertResult, String facSpec){
         this.FIO = FIO;
         this.mathResult = mathResult;

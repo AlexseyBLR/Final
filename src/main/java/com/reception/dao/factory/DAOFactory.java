@@ -19,6 +19,7 @@ public class DAOFactory {
     private final ResultDAO resultDAO = new RequestsDAOImpl();
 
 
+
     public UserDAO getCustomerDao() {
         return userDAO;
     }

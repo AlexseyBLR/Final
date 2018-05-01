@@ -1,6 +1,6 @@
 package com.reception.controller.command;
 
-import com.reception.controller.command.UserCommand.GetResultCommand;
+import com.reception.controller.command.user.GetResultCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;

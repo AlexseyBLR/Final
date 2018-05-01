@@ -3,7 +3,7 @@ package com.reception.service.validator.impl;
 
 import com.reception.controller.constant.Constant;
 import com.reception.entity.User;
-import com.reception.service.validator.CustomerValidator;
+import com.reception.service.validator.UserValidator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 
-public class UserValidatorImpl extends AbstractValidator implements CustomerValidator<User> {
+public class UserValidatorImpl extends AbstractValidator implements UserValidator<User> {
 
     private static final String EMAIL_REG_EXP = "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
 

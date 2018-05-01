@@ -1,6 +1,5 @@
 package com.reception.controller.command;
 
-import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
 import com.reception.entity.User;
 import com.reception.service.UserService;
@@ -9,11 +8,12 @@ import com.reception.service.exception.ValidatorException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN;
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER;
 
 public class LoginationPageCommand implements Command {
 
@@ -41,10 +41,10 @@ public class LoginationPageCommand implements Command {
                 request.getSession().setAttribute("sertResult", user.getSertResult());
                 request.getSession().setAttribute("role", user.getRole());
                 if (user.getRole().equals("user")) {
-                    response.sendRedirect("/home");
+                    response.sendRedirect(PAGE_USER);
                 }
                 if (user.getRole().equals("admin")) {
-                    response.sendRedirect("/adminMain");
+                    response.sendRedirect(PAGE_ADMIN);
                 }
             } else {
                 response.sendRedirect("/index.jsp");
@@ -53,13 +53,7 @@ public class LoginationPageCommand implements Command {
             logger.error("Exception from singIn command", e);
             throw new ControllerException(e);
         } catch (ValidatorException e) {
-
-            try {
-                response.sendRedirect(Constant.WebProperty.PAGE_LOGIN);
-            } catch (IOException ex) {
-                logger.debug("Exception ", e);
-                throw new ControllerException("Exception in singinCommand while send redirect to main page", e);
-            }
+            throw new ControllerException("Exception in singin Command with validator", e);
         }
     }
 }

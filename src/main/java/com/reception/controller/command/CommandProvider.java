@@ -1,15 +1,14 @@
 package com.reception.controller.command;
 
-import com.reception.controller.command.Admin.ApprovedRequestsCommand;
-import com.reception.controller.command.Admin.GetResultCommand;
-import com.reception.controller.command.Admin.GetUsersCommand;
-import com.reception.controller.command.Admin.GetRequestCommand;
-import com.reception.controller.command.UserCommand.AddRequestToDesignCommand.ArchDesignCommand;
-import com.reception.controller.command.UserCommand.AddRequestToBuildingCommand.ArchBuildingCommand;
-import com.reception.controller.command.UserCommand.AddRequestToExploatationCommand.MechExploatationCommand;
-import com.reception.controller.command.UserCommand.AddRequestToRepairCommand.MechRepairCommand;
-
-
+import com.reception.controller.command.user.addRequestToBuilding.ArchBuildingCommand;
+import com.reception.controller.command.user.addRequestToDesign.ArchDesignCommand;
+import com.reception.controller.command.user.addRequestToExploatation.MechExploatationCommand;
+import com.reception.controller.command.user.addRequestToRepair.MechRepairCommand;
+import com.reception.controller.command.adminCommand.ApprovedRequestsCommand;
+import com.reception.controller.command.adminCommand.GetRequestCommand;
+import com.reception.controller.command.adminCommand.GetResultCommand;
+import com.reception.controller.command.adminCommand.GetUsersCommand;
+import com.reception.controller.command.user.UpdateUserInfoCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,9 +32,9 @@ public final class CommandProvider {
         commandMap.put("getRequests", new GetRequestCommand());
         commandMap.put("approvedRequests", new ApprovedRequestsCommand());
         commandMap.put("showResult", new GetResultCommand());
-        commandMap.put("showResultToUser", new com.reception.controller.command.UserCommand.GetResultCommand());
+        commandMap.put("showResultToUser", new com.reception.controller.command.user.GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
-
+        commandMap.put("updateInfo", new UpdateUserInfoCommand());
 
 
     }
@@ -47,4 +46,5 @@ public final class CommandProvider {
     public static CommandProvider getInstance() {
         return instance;
     }
+
 }

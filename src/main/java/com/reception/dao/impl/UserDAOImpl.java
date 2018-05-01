@@ -31,8 +31,8 @@ public class UserDAOImpl implements UserDAO {
 
     private final static String SQL_GET_PREPARED_STATEMENT = "SELECT * from "+TABLE_NAME+" WHERE email=?";
 
-    private final static String SQL_UPDATE_PREPARED_STATEMENT = "UPDATE "+TABLE_NAME+" " +
-            "SET first_name=? , last_name=? , patronymic=? , phone=? , email=? , password=? " +
+    private final static String SQL_UPDATE_PREPARED_STATEMENT = "UPDATE user " +
+            "SET first_name=? , last_name=? , patronymic=? , Math_result=? , Phys_result=? , Lang_result=?, Sert_result=? "+
             "WHERE email=?";
 
     private final static String SQL_DELETE_PREPARED_STATEMENT = "DELETE FROM "+TABLE_NAME+"WHERE email=?";
@@ -196,7 +196,7 @@ public class UserDAOImpl implements UserDAO {
 
 
     @Override
-    public void update(User user) throws DAOException {
+    public boolean update(User user) throws DAOException {
 
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_UPDATE_PREPARED_STATEMENT)
@@ -204,18 +204,17 @@ public class UserDAOImpl implements UserDAO {
             statement.setString(1,user.getFirst_name());
             statement.setString(2,user.getLast_name());
             statement.setString(3,user.getPatronymic());
-            statement.setString(4,user.getEmail());
-            statement.setString(5,user.getPassword());
-            statement.setString(6,user.getPhoneNumber());
-            statement.setInt(8,user.getMathResult());
-            statement.setInt(9,user.getPhysResult());
-            statement.setInt(10,user.getLangResult());
-            statement.setInt(11,user.getSertResult());
+            statement.setInt(4,user.getMathResult());
+            statement.setInt(5,user.getPhysResult());
+            statement.setInt(6,user.getLangResult());
+            statement.setInt(7,user.getSertResult());
+            statement.setString(8, user.getEmail());
             statement.executeUpdate();
         }catch (SQLException e){
             logger.error("Exception in update user  method ",e);
             throw new DAOException("Update user method error",e);
         }
+        return false;
     }
 
 

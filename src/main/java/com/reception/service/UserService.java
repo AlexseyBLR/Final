@@ -15,4 +15,6 @@ public interface UserService {
 
     String generateHashPassword(String pw) throws ServiceException;
 
+    boolean update(User user) throws ServiceException;
+
 }

@@ -18,16 +18,22 @@ public class Constant {
 
     public static class  WebProperty {
 
-        public final static String PAGE_CUSTOMER = "/account";
-        public final static String PAGE_ADMIN = "/Admin/account";
-        public final static String PAGE_ERROR = "/error";
-        public final static String PAGE_CUSTOMER_LIST = "/Admin/customers";
+        public final static String PAGE_USER = "/home";
         public final static String PAGE_REGISTRATION = "/registration";
-        public final static String PAGE_PRODUCT_SETTING = "/Admin/product/setting?id=";
-        public final static String PAGE_MAIN = "/home";
-        public final static String PAGE_NOT_FOUND = "/WEB-INF/PageNotFound.jsp";
-        public final static String PAGE_LOGIN = "/login";
-        public final static String PAGE_PRODUCT = "/product";
+        public final static String PAGE_ERROR = "/error";
+        public final static String PAGE_USER_REQUEST = "/userReq";
+        public final static String PAGE_USER_RESULT = "/result";
+        public final static String PAGE_USER_MAIN = "/userMain";
+        public final static String PAGE_USER_UPDATE = "/userUpdate";
+
+        public final static String PAGE_ADMIN = "/adminMain";
+        public final static String PAGE_ADMIN_RESULT = "/adminResult";
+        public final static String PAGE_ADMIN_REQUEST = "/adminRequests";
+        public final static String PAGE_ADMIN_SHOW_USERS = "/showUsers";
+
+        public final static String HIDDEN_PARAMETER = "command";
+
+
     }
 
     public static class RequestProperty {
@@ -44,5 +50,13 @@ public class Constant {
         public static final String ARCHITECTURE_DESIGN_FACULTY = "'Faculty: ARCHITECTURE, speciality: DESIGN'";
         public static final String MECHANICAL_EXPLOATATION_FACULTY = "'Faculty: MECHANICAL, speciality: EXPLOATATION'";
         public static final String MECHANICAL_REPAIR_FACULTY = "'Faculty: MECHANICAL, speciality: REPAIR'";
+    }
+
+    public static class Speciality {
+
+        public static final String BUILDING = "Building";
+        public static final String DESIGN = "Design";
+        public static final String EXPLOATATION = "Exploatation";
+        public static final String REPAIR = "Repair";
     }
 }

@@ -17,5 +17,5 @@ public interface UserDAO {
 
     List<User> getAll() throws DAOException;
 
-    void update(User user) throws DAOException;
+    boolean update(User user) throws DAOException;
 }
