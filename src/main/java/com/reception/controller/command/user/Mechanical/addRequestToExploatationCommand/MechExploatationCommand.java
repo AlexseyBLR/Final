@@ -9,12 +9,15 @@ import com.reception.service.ResultService;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+
+import static com.reception.controller.constant.Constant.RegistrationProperty.*;
+import static com.reception.controller.constant.Constant.RegistrationProperty.SERT_RESULT_PARAMETER;
+import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
 public class MechExploatationCommand implements Command {
@@ -35,23 +38,22 @@ public class MechExploatationCommand implements Command {
 
 
         HttpSession session = request.getSession(true);
-        String userFIO = String.valueOf(session.getAttribute("userFIO"));
-        int mathResult = Integer.parseInt(String.valueOf(session.getAttribute("mathResult")));
-        int langResult = Integer.parseInt(String.valueOf(session.getAttribute("physResult")));
-        int physResult = Integer.parseInt(String.valueOf(session.getAttribute("langResult")));
-        int sertResult = Integer.parseInt(String.valueOf(session.getAttribute("sertResult")));
+        String userFIO = String.valueOf(session.getAttribute(FIO_PARAMETER));
+        int mathResult = Integer.parseInt(String.valueOf(session.getAttribute(MATH_RESULT_PARAMETER)));
+        int langResult = Integer.parseInt(String.valueOf(session.getAttribute(PHYS_RESULT_PARAMETER)));
+        int physResult = Integer.parseInt(String.valueOf(session.getAttribute(LANG_RESULT_PARAMETER)));
+        int sertResult = Integer.parseInt(String.valueOf(session.getAttribute(SERT_RESULT_PARAMETER)));
 
 
         UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.MECHANICAL_EXPLOATATION_FACULTY);
 
         boolean result = resultService.saveResult(resultForRequest);
         if(result){
-            session.setAttribute("result1", new String("Send"));
-            response.sendRedirect("/userReq");
+            session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String(SESSION_ATTRIBUTE_RESULT_SENT));
+            response.sendRedirect(PAGE_USER_REQUEST);
 
         }else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/BasePages/errorPage.jsp");
-            dispatcher.forward(request, response);
+            response.sendRedirect(PAGE_ERROR);
         }
 
 

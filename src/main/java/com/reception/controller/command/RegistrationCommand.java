@@ -6,13 +6,13 @@ import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static com.reception.controller.constant.Constant.WebProperty.PAGE_REGISTRATION;
+import static com.reception.controller.constant.Constant.WebProperty.USER_ATTRIBUTE_NAME;
 
 
 public class RegistrationCommand implements Command {
@@ -47,7 +47,7 @@ public class RegistrationCommand implements Command {
             int physResult = Integer.parseInt(request.getParameter(PHYS_RESULT_PARAMETER));
             int langResult = Integer.parseInt(request.getParameter(LANG_RESULT_PARAMETER));
             int sertResult = Integer.parseInt(request.getParameter(SERT_RESULT_PARAMETER));
-            String role = "user";
+            String role = USER_ATTRIBUTE_NAME;
 
             User user = new User(firstName, lastName, patronymic, email, password,
                     phoneNumber, mathResult, physResult, langResult, sertResult, role);
@@ -60,10 +60,6 @@ public class RegistrationCommand implements Command {
 
                 response.sendRedirect(PAGE_REGISTRATION);
 
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/registration");
-                dispatcher.forward(request, response);
-
-                response.sendRedirect("/registration");
             }
 
         } catch (ServiceException | IOException | RuntimeException e) {

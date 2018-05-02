@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN_RESULT;
+import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
 public class GetResultForAdminCommand implements Command {
@@ -27,16 +27,16 @@ public class GetResultForAdminCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
 
         List<UserRequest> listME = resultService.getResult(Constant.ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
-        request.getSession().setAttribute("resultME", listME);
+        request.getSession().setAttribute(SESSION_ATTRIBUTE_ME, listME);
 
         List<UserRequest> listMR = resultService.getResult(Constant.ResultProperty.MECHANICAL_REPAIR_FACULTY);
-        request.getSession().setAttribute("resultMR", listMR);
+        request.getSession().setAttribute(SESSION_ATTRIBUTE_MR, listMR);
 
         List<UserRequest> listAD = resultService.getResult(Constant.ResultProperty.ARCHITECTURE_DESIGN_FACULTY);
-        request.getSession().setAttribute("resultAD", listAD);
+        request.getSession().setAttribute(SESSION_ATTRIBUTE_AD, listAD);
 
         List<UserRequest> listAB = resultService.getResult(Constant.ResultProperty.ARCHITECTURE_BUILDING_FACULTY);
-        request.getSession().setAttribute("resultAB", listAB);
+        request.getSession().setAttribute(SESSION_ATTRIBUTE_AB, listAB);
 
 
         response.sendRedirect(PAGE_ADMIN_RESULT);

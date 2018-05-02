@@ -14,8 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN;
-import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER;
+import static com.reception.controller.command.RegistrationCommand.*;
+import static com.reception.controller.constant.Constant.RegistrationProperty.FIO_PARAMETER;
+import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
 public class LoginationPageCommand implements Command {
@@ -25,6 +26,7 @@ public class LoginationPageCommand implements Command {
     private final static Logger logger = Logger.getLogger(LoginationPageCommand.class);
 
 
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
@@ -32,23 +34,23 @@ public class LoginationPageCommand implements Command {
         String password = null;
 
         try {
-            email = request.getParameter("email");
-            password = request.getParameter("password");
+            email = request.getParameter(REQUEST_PARAMETER_EMAIL);
+            password = request.getParameter(REQUEST_PARAMETER_PASSWORD);
 
             User user = service.findUserByEmailAndPassword(email, password);
             if (user != null| !email.equals("")) {
-                request.getSession().setAttribute("userFIO", user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
-                request.getSession().setAttribute("mathResult", user.getMathResult());
-                request.getSession().setAttribute("physResult", user.getPhysResult());
-                request.getSession().setAttribute("langResult", user.getLangResult());
-                request.getSession().setAttribute("sertResult", user.getSertResult());
-                request.getSession().setAttribute("role", user.getRole());
-                if (user.getRole().equals("user")) {
+                request.getSession().setAttribute(FIO_PARAMETER, user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
+                request.getSession().setAttribute(MATH_RESULT_PARAMETER, user.getMathResult());
+                request.getSession().setAttribute(PHYS_RESULT_PARAMETER, user.getPhysResult());
+                request.getSession().setAttribute(LANG_RESULT_PARAMETER, user.getLangResult());
+                request.getSession().setAttribute(SERT_RESULT_PARAMETER, user.getSertResult());
+                request.getSession().setAttribute(USER_ATTRIBUTE_ROLE, user.getRole());
+                if (user.getRole().equals(USER_ATTRIBUTE_NAME)) {
 
                     response.sendRedirect(PAGE_USER);
 
                 }
-                if (user.getRole().equals("admin")) {
+                if (user.getRole().equals(ADMIN_ROLE)) {
                     response.sendRedirect(PAGE_ADMIN);
                 }
             } else {

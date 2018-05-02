@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.reception.controller.constant.Constant.WebProperty.REQUEST_HEADER_NAME;
+
 public class GetRequestCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
@@ -25,11 +27,11 @@ public class GetRequestCommand implements Command {
 
         try {
             List<UserRequest> list = resultService.getAllUsers();
-            request.getSession().setAttribute("requests", list);
+            request.getSession().setAttribute(REQUEST_HEADER_NAME, list);
 
             response.sendRedirect("/adminRequests");
         } catch (ServiceException e) {
-            logger.error("Exception on \"GetRequestComand\"", e);
+            logger.error("Exception on \"GetRequestCommand\"", e);
         }
 
 

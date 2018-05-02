@@ -7,7 +7,7 @@ import com.reception.controller.command.Admin.GetUsersCommand;
 import com.reception.controller.command.user.Architecture.addRequestToBuildingCommand.ArchBuildingCommand;
 import com.reception.controller.command.user.Architecture.addRequestToDesignCommand.ArchDesignCommand;
 import com.reception.controller.command.user.GetResultCommand;
-import com.reception.controller.command.user.MechExploatationCommand;
+import com.reception.controller.command.user.Mechanical.addRequestToExploatationCommand.MechExploatationCommand;
 import com.reception.controller.command.user.Mechanical.addRequestToRepairCommand.MechRepairCommand;
 
 import java.util.HashMap;

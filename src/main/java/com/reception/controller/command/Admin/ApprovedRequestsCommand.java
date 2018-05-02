@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN_REQUEST;
+import static com.reception.controller.constant.Constant.WebProperty.REQUEST_HEADER_NAME;
+
 public class ApprovedRequestsCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
@@ -27,8 +30,8 @@ public class ApprovedRequestsCommand implements Command {
             for (int i = 0; i < resultService.getAllUsers().size(); i++) {
                 resultService.updateUsers(list.get(i));
             }
-            request.getSession().setAttribute("request", list);
-            response.sendRedirect("/adminRequests");
+            request.getSession().setAttribute(REQUEST_HEADER_NAME, list);
+            response.sendRedirect(PAGE_ADMIN_REQUEST);
         } catch (
                 ServiceException e) {
             logger.error("Exception on \"ApprovedRequestsCommand\"", e);

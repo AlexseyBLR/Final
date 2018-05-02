@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_ADMIN_SHOW_USERS;
+import static com.reception.controller.constant.Constant.WebProperty.SESSION_ATTRIBUTE_USERlIST;
+
 public class GetUsersCommand implements Command {
 
     private final ServiceFactory factory = ServiceFactory.getInstance();
@@ -24,11 +27,11 @@ public class GetUsersCommand implements Command {
 
         try {
             List<User> list = userService.getAllUsers();
-            request.getSession().setAttribute("userList", list);
+            request.getSession().setAttribute(SESSION_ATTRIBUTE_USERlIST, list);
 
-            response.sendRedirect("/showUsers");
+            response.sendRedirect(PAGE_ADMIN_SHOW_USERS);
         } catch (ServiceException e) {
-            e.printStackTrace();
+            logger.error("exception in \"Get User Command\"", e);
         }
 
 

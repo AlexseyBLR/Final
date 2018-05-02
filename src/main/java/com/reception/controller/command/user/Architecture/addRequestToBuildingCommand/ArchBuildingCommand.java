@@ -9,13 +9,15 @@ import com.reception.service.ResultService;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_ERROR;
+import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER_REQUEST;
+import static com.reception.controller.constant.Constant.WebProperty.SESSION_ATTRIBUTE_RESULT;
 
 
 public class ArchBuildingCommand implements Command {
@@ -45,12 +47,11 @@ public class ArchBuildingCommand implements Command {
 
         boolean result = resultService.saveResult(resultForRequest);
         if (result) {
-            session.setAttribute("result1", new String("Send"));
-            response.sendRedirect("/userReq");
+            session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String("Send"));
+            response.sendRedirect(PAGE_USER_REQUEST);
 
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/BasePages/errorPage.jsp");
-            dispatcher.forward(request, response);
+            response.sendRedirect(PAGE_ERROR);
         }
 
 
