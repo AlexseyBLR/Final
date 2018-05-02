@@ -3,9 +3,9 @@ package com.reception.controller.command.user.Architecture.addRequestToBuildingC
 import com.reception.controller.command.Command;
 import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
-import com.reception.dao.exception.DAOException;
 import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
+import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
@@ -15,9 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.WebProperty.PAGE_ERROR;
-import static com.reception.controller.constant.Constant.WebProperty.PAGE_USER_REQUEST;
-import static com.reception.controller.constant.Constant.WebProperty.SESSION_ATTRIBUTE_RESULT;
+import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
 public class ArchBuildingCommand implements Command {
@@ -32,7 +30,7 @@ public class ArchBuildingCommand implements Command {
 
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException, DAOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
 
         HttpSession session = request.getSession(true);
@@ -45,7 +43,12 @@ public class ArchBuildingCommand implements Command {
 
         UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.ARCHITECTURE_BUILDING_FACULTY);
 
-        boolean result = resultService.saveResult(resultForRequest);
+        boolean result = false;
+        try {
+            result = resultService.saveResult(resultForRequest);
+        } catch (ServiceException e) {
+            logger.error("Request error", e);
+        }
         if (result) {
             session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String("Send"));
             response.sendRedirect(PAGE_USER_REQUEST);

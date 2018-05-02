@@ -3,9 +3,9 @@ package com.reception.controller.command.user.Mechanical.addRequestToExploatatio
 import com.reception.controller.command.Command;
 import com.reception.controller.constant.Constant;
 import com.reception.controller.exception.ControllerException;
-import com.reception.dao.exception.DAOException;
 import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
+import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
@@ -16,7 +16,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 import static com.reception.controller.constant.Constant.RegistrationProperty.*;
-import static com.reception.controller.constant.Constant.RegistrationProperty.SERT_RESULT_PARAMETER;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
@@ -34,7 +33,7 @@ public class MechExploatationCommand implements Command {
 
 //    ME_request   имя таблицы
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException, DAOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
 
         HttpSession session = request.getSession(true);
@@ -47,7 +46,12 @@ public class MechExploatationCommand implements Command {
 
         UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.MECHANICAL_EXPLOATATION_FACULTY);
 
-        boolean result = resultService.saveResult(resultForRequest);
+        boolean result = false;
+        try {
+            result = resultService.saveResult(resultForRequest);
+        } catch (ServiceException e) {
+            logger.error("Request error", e);
+        }
         if(result){
             session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String(SESSION_ATTRIBUTE_RESULT_SENT));
             response.sendRedirect(PAGE_USER_REQUEST);

@@ -33,7 +33,7 @@
     <table class="table table-striped table-bordered table-condensed" style="margin-left: 30px; width: 1540px">
         <thead class="thead-default">
         <tr>
-            <th><fmt:message key="admin.user.Fname"/> </th>
+            <th><fmt:message key="admin.user.Fname"/></th>
             <th><fmt:message key="admin.user.Lname"/></th>
             <th><fmt:message key="admin.user.patr"/></th>
             <th>Email</th>
@@ -43,24 +43,34 @@
             <th><fmt:message key="admin.user.result.lang"/></th>
             <th><fmt:message key="admin.user.result.cert"/></th>
             <th><fmt:message key="admin.user.role"/></th>
+            <th><fmt:message
+                    key="admin.button.delete"/></th>
             <c:forEach items="${userList}" var="user">
         </tr>
         </thead>
+        <form action="/FrontController" method="post">
         <tr>
+                <td>${user.first_name}</td>
+                <td>${user.last_name}</td>
+                <td>${user.patronymic}</td>
+                <td>${user.email}</td>
+                <td>${user.phoneNumber}</td>
+                <td>${user.mathResult}</td>
+                <td>${user.physResult}</td>
+                <td>${user.langResult}</td>
+                <td>${user.sertResult}</td>
+                <td>${user.role}</td>
+                <td>
+                    <input type="hidden" name="command" value="deleteUser">
+                    <input type="hidden" name="emailForDelete" value=${user.email}>
+                    <input class="btn btn-info" type="submit" value=<fmt:message
+                            key="admin.button.text"/>>
 
-            <td>${user.first_name}</td>
-            <td>${user.last_name}</td>
-            <td>${user.patronymic}</td>
-            <td>${user.email}</td>
-            <td>${user.phoneNumber}</td>
-            <td>${user.mathResult}</td>
-            <td>${user.physResult}</td>
-            <td>${user.langResult}</td>
-            <td>${user.sertResult}</td>
-            <td>${user.role}</td>
+                </td>
 
 
         </tr>
+        </form>
         </c:forEach>
         </tbody>
     </table>

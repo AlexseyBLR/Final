@@ -17,4 +17,6 @@ public interface UserDAO {
 
     void update(User user) throws DAOException;
 
+    void delete(String string) throws DAOException;
+
 }

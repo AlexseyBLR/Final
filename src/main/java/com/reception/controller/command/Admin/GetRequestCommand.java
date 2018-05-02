@@ -1,7 +1,6 @@
 package com.reception.controller.command.Admin;
 
 import com.reception.controller.command.Command;
-import com.reception.dao.exception.DAOException;
 import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
 import com.reception.service.exception.ServiceException;
@@ -22,7 +21,7 @@ public class GetRequestCommand implements Command {
     private final static Logger logger = Logger.getLogger(GetRequestCommand.class);
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
         try {

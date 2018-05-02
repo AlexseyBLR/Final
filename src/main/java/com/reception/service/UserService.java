@@ -13,6 +13,6 @@ public interface UserService {
 
     List<User> getAllUsers() throws ServiceException;
 
-    String generateHashPassword(String pw) throws ServiceException;
+    void deleteCustomer(String email) throws ServiceException;
 
 }

@@ -52,6 +52,9 @@ public class Constant {
         public final static String PAGE_ADMIN_SHOW_USERS = "/showUsers";
         public final static String PAGE_LOGIN = "/login";
         public final static String HIDDEN_PARAMETER = "command";
+        public final static String HIDDEN_PARAMETER_FOR_DELETE = "emailForDelete";
+        public final static String HIDDEN_PARAMETER_FOR_DELETE_REQUEST = "FIOForDelete";
+
 
 
     }

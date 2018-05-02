@@ -11,7 +11,9 @@ public interface ResultDAO {
 
     List<UserRequest> getAll() throws DAOException;
 
-    public void updateUsers(UserRequest resultForRequest) throws DAOException;
+    void updateUsers(UserRequest resultForRequest) throws DAOException;
+
+    void delete(String FIO) throws DAOException;
 
     List<UserRequest> getEnlistedUsers(String facultySpeciality) throws DAOException;
 

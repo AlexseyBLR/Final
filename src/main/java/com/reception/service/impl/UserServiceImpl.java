@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
         try {
             return customerDAO.save(user);
         } catch (DAOException e) {
+            logger.error("can not save user", e);
             throw new ServiceException("exception from saveCustomer method", e);
         }
     }
@@ -43,6 +44,7 @@ public class UserServiceImpl implements UserService {
             }
             return customerDAO.findCustomerByEmailAndPassword(email, password);
         } catch (DAOException e) {
+            logger.error("can not find users", e);
             throw new ServiceException("exception from findUserByEmailAndPassword method", e);
         }
     }
@@ -53,15 +55,18 @@ public class UserServiceImpl implements UserService {
             List<User> list = customerDAO.getAllUsers();
             return list;
         } catch (DAOException e) {
+            logger.error("can not get all users", e);
             throw new ServiceException("exception from getAllUsers method", e);
         }
     }
 
     @Override
-    public String generateHashPassword(String pw) throws ServiceException {
-//        return this.hashGenerator.generateHashPassword(pw);
-        return null;
+    public void deleteCustomer(String email)  throws ServiceException {
+        try {
+            customerDAO.delete(email);
+        } catch (DAOException e) {
+            logger.error("can not delete user in Service", e);
+            throw new ServiceException("exception from deleteCustomer method", e);
+        }
     }
-
-
 }

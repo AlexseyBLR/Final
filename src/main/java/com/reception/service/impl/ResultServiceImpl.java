@@ -5,6 +5,7 @@ import com.reception.dao.exception.DAOException;
 import com.reception.dao.factory.DAOFactory;
 import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
+import com.reception.service.exception.ServiceException;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -17,46 +18,58 @@ public class ResultServiceImpl implements ResultService {
 
 
     @Override
-    public List<UserRequest> getAllUsers() {
+    public List<UserRequest> getAllUsers() throws ServiceException {
         try {
             List<UserRequest> lists = resultDAO.getAll();
             return lists;
         } catch (DAOException e) {
             logger.error("Can't get result", e);
+            throw new ServiceException("can not get all users", e);
         }
-        return null;
     }
 
     @Override
-    public List<UserRequest> getResult(String facultySpeciality) {
+    public List<UserRequest> getResult(String facultySpeciality) throws ServiceException {
         try {
             List<UserRequest> lists = resultDAO.getEnlistedUsers(facultySpeciality);
             return lists;
         } catch (DAOException e) {
             logger.error("Can't get result", e);
+            throw new ServiceException("can not get result", e);
         }
-        return null;
+
     }
 
     @Override
-    public boolean updateUsers(UserRequest request) {
+    public boolean updateUsers(UserRequest request) throws ServiceException {
         try {
 
             resultDAO.updateUsers(request);
             return true;
         } catch (DAOException e) {
             logger.error("Can't save result", e);
+            throw new ServiceException("can not update user", e);
         }
-        return false;
+
     }
 
     @Override
-    public boolean saveResult(UserRequest request) {
+    public boolean saveResult(UserRequest request) throws ServiceException {
         try {
             return resultDAO.addResult(request);
         } catch (DAOException e) {
             logger.error("Can't save result", e);
+            throw new ServiceException("can not save result", e);
         }
-        return false;
+    }
+
+    @Override
+    public void delete(String FIO) throws ServiceException {
+        try {
+            resultDAO.delete(FIO);
+        } catch (DAOException e) {
+            logger.error("can not delete request in Service", e);
+            throw new ServiceException("exception from deleteRequest method", e);
+        }
     }
 }

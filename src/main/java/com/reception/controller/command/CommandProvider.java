@@ -1,9 +1,6 @@
 package com.reception.controller.command;
 
-import com.reception.controller.command.Admin.ApprovedRequestsCommand;
-import com.reception.controller.command.Admin.GetRequestCommand;
-import com.reception.controller.command.Admin.GetResultForAdminCommand;
-import com.reception.controller.command.Admin.GetUsersCommand;
+import com.reception.controller.command.Admin.*;
 import com.reception.controller.command.user.Architecture.addRequestToBuildingCommand.ArchBuildingCommand;
 import com.reception.controller.command.user.Architecture.addRequestToDesignCommand.ArchDesignCommand;
 import com.reception.controller.command.user.GetResultCommand;
@@ -35,12 +32,13 @@ public final class CommandProvider {
         commandMap.put("showResultToUser", new GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
 
-        //commandMap.put("updateInfo", new UpdateUserInfoCommand());
-
         commandMap.put("showResultForAdmin", new GetResultForAdminCommand());
+        commandMap.put("deleteUser", new DeleteUserCommand());
         commandMap.put("showResultToUser", new GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
         commandMap.put("getRequests", new GetRequestCommand());
+        commandMap.put("deleteRequest", new DeleteRequestCommand());
+
     }
 
     public Map<String, Command> getCommandMap() {

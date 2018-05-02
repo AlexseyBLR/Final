@@ -7,13 +7,13 @@
        value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale.language}"
        scope="session"/>
 <fmt:setLocale value="${language}"/>
-<fmt:setBundle basename="admin" />
+<fmt:setBundle basename="admin"/>
 <html>
 <head>
     <title>Title</title>
     <style>
 
-        .thead-default{
+        .thead-default {
             background-color: #323232 !important;
             color: white !important;
         }
@@ -35,8 +35,9 @@
 <jsp:include page="/Admin/adminBP.jsp"></jsp:include>
 
 <form action="/FrontController" method="post">
-    <input type="hidden" name="command" value="getRequests" >
-    <input type="submit" class="btn btn-primary"  style="margin-left: 150px" value=<fmt:message key="admin.button.update"/>>
+    <input type="hidden" name="command" value="getRequests">
+    <input type="submit" class="btn btn-primary" style="margin-left: 150px" value=<fmt:message
+            key="admin.button.update"/>>
     <img src="https://icon-icons.com/icons2/247/PNG/512/REFRESH2_26887.png" width="30px" height="30px"/>
 </form>
 <div id="ordersBody">
@@ -50,20 +51,29 @@
             <th><fmt:message key="admin.C"/></th>
             <th><fmt:message key="admin.request.FacSpec"/></th>
             <th><fmt:message key="admin.status"/></th>
+            <th><fmt:message
+                    key="admin.button.reqDel"/></th>
             <c:forEach items="${requests}" var="resultME">
         </tr>
         </thead>
-        <tr>
+        <form action="/FrontController" method="post">
+            <tr>
+                <td>${resultME.FIO}</td>
+                <td>${resultME.mathResult}</td>
+                <td>${resultME.physResult}</td>
+                <td>${resultME.langResult}</td>
+                <td>${resultME.sertResult}</td>
+                <td>${resultME.facSpec}</td>
+                <td>${resultME.status}</td>
+                <td>
+                    <input type="hidden" name="command" value="deleteRequest">
+                    <input type="hidden" name="FIOForDelete" value=${resultME.FIO}>
+                    <input class="btn btn-info" type="submit" value=<fmt:message
+                            key="admin.button.text"/>>
+                </td>
 
-            <td>${resultME.FIO}</td>
-            <td>${resultME.mathResult}</td>
-            <td>${resultME.physResult}</td>
-            <td>${resultME.langResult}</td>
-            <td>${resultME.sertResult}</td>
-            <td>${resultME.facSpec}</td>
-            <td>${resultME.status}</td>
-
-        </tr>
+            </tr>
+        </form>
         </c:forEach>
         </tbody>
     </table>
@@ -71,7 +81,8 @@
 
 <form action="FrontController" method="get">
     <input type="hidden" name="command" value="approvedRequests">
-    <input type="submit" value=<fmt:message key="admin.button.accept"/> class="btn btn-primary" style="margin-left: 150px">
+    <input type="submit" value=
+    <fmt:message key="admin.button.accept"/> class="btn btn-primary" style="margin-left: 150px">
 </form>
 </body>
 </html>

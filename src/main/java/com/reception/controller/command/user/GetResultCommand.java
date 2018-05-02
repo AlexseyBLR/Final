@@ -3,10 +3,9 @@ package com.reception.controller.command.user;
 
 import com.reception.controller.command.Command;
 import com.reception.controller.constant.Constant;
-import com.reception.dao.exception.DAOException;
-
 import com.reception.entity.UserRequest;
 import com.reception.service.ResultService;
+import com.reception.service.exception.ServiceException;
 import com.reception.service.factory.ServiceFactory;
 import org.apache.log4j.Logger;
 
@@ -24,7 +23,7 @@ public class GetResultCommand implements Command {
     private final static Logger logger = Logger.getLogger(GetResultCommand.class);
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, DAOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServiceException {
 
         List<UserRequest> listME = resultService.getResult(Constant.ResultProperty.MECHANICAL_EXPLOATATION_FACULTY);
         request.getSession().setAttribute(SESSION_ATTRIBUTE_ME, listME);

@@ -31,6 +31,8 @@ public class RequestsDAOImpl implements ResultDAO {
 
     private final static String SELECT_ALL_SQL = "select * from requests";
 
+    private final static String DELETE_PREPARED_STATEMEN = "delete from "+TABLE_NAME+" where fio like ? ";
+
     private final static String APPROVED_STATUS = "applied";
 
     private final static String SQL_UPDATE_STATUS_PREPARED_STATEMENT = "UPDATE " + TABLE_NAME + " " +
@@ -141,5 +143,18 @@ public class RequestsDAOImpl implements ResultDAO {
             throw new DAOException("getAllUsers customers  method", e);
         }
 
+    }
+
+    @Override
+    public void delete(String FIO) throws DAOException {
+        try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
+            PreparedStatement statement = connection.getPreparedStatement(DELETE_PREPARED_STATEMEN)
+        ){
+            statement.setString(1, "%"+FIO+"%");
+            statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error("Exception in deleterequest method ",e);
+            throw new DAOException("DeleteRequest method",e);
+        }
     }
 }

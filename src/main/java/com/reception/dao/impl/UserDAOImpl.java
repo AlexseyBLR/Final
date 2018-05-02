@@ -2,7 +2,6 @@ package com.reception.dao.impl;
 
 
 import com.reception.dao.UserDAO;
-import com.reception.dao.exception.ConnectionPoolException;
 import com.reception.dao.exception.DAOException;
 import com.reception.dao.impl.connectionPool.ConnectionPool;
 import com.reception.dao.impl.connectionPool.ConnectionPoolImpl;
@@ -36,7 +35,7 @@ public class UserDAOImpl implements UserDAO {
             "SET first_name=? , last_name=? , patronymic=? , phone=? , email=? , password=? " +
             "WHERE email=?";
 
-    private final static String SQL_DELETE_PREPARED_STATEMENT = "DELETE FROM "+TABLE_NAME+"WHERE email=?";
+    private final static String SQL_DELETE_PREPARED_STATEMENT = "DELETE FROM "+TABLE_NAME+" WHERE email=?";
 
     private final static String SELECT_ALL_SQL = "select * from user";
 
@@ -216,12 +215,11 @@ public class UserDAOImpl implements UserDAO {
     }
 
 
-    public void delete(User user) throws DAOException {
-
+    public void delete(String email) throws DAOException {
         try(WrappedConnection connection = new WrappedConnection(connectionPool.getConnection());
             PreparedStatement statement = connection.getPreparedStatement(SQL_DELETE_PREPARED_STATEMENT)
         ){
-            statement.setString(1,user.getEmail());
+            statement.setString(1, email);
             statement.executeUpdate();
         }catch (SQLException e){
             logger.error("Exception in delete user  method ",e);
