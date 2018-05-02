@@ -28,7 +28,6 @@ public class GetUsersCommand implements Command {
         try {
             List<User> list = userService.getAllUsers();
             request.getSession().setAttribute(SESSION_ATTRIBUTE_USERlIST, list);
-
             response.sendRedirect(PAGE_ADMIN_SHOW_USERS);
         } catch (ServiceException e) {
             logger.error("exception in \"Get User Command\"", e);

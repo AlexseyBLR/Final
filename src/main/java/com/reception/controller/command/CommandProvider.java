@@ -24,14 +24,14 @@ public final class CommandProvider {
         commandMap.put("registration", new RegistrationCommand());
         commandMap.put("Exploatation", new MechExploatationCommand());
         commandMap.put("CarRepair", new MechRepairCommand());
-        commandMap.put("Architecture", new ArchBuildingCommand());
+        commandMap.put("Building", new ArchBuildingCommand());
         commandMap.put("Design", new ArchDesignCommand());
-        commandMap.put("approvedRequests", new ApprovedRequestsCommand());
 
         commandMap.put("showResult", new GetResultCommand());
         commandMap.put("showResultToUser", new GetResultCommand());
         commandMap.put("showUsers", new GetUsersCommand());
 
+        commandMap.put("approvedRequests", new ApprovedRequestsCommand());
         commandMap.put("showResultForAdmin", new GetResultForAdminCommand());
         commandMap.put("deleteUser", new DeleteUserCommand());
         commandMap.put("showResultToUser", new GetResultCommand());

@@ -49,7 +49,7 @@
         </tr>
         </thead>
         <form action="/FrontController" method="post">
-        <tr>
+            <tr>
                 <td>${user.first_name}</td>
                 <td>${user.last_name}</td>
                 <td>${user.patronymic}</td>
@@ -63,13 +63,20 @@
                 <td>
                     <input type="hidden" name="command" value="deleteUser">
                     <input type="hidden" name="emailForDelete" value=${user.email}>
-                    <input class="btn btn-info" type="submit" value=<fmt:message
-                            key="admin.button.text"/>>
+                    <c:if test="${user.role eq 'admin'}">
+                        <input class="btn btn-info" type="submit" disabled value=<fmt:message
+                                key="admin.button.text"/>>
+                    </c:if>
+                    <c:if test="${user.role eq 'user'}">
+                        <input class="btn btn-info" type="submit" value=<fmt:message
+                                key="admin.button.text"/>>
+                    </c:if>
+
 
                 </td>
 
 
-        </tr>
+            </tr>
         </form>
         </c:forEach>
         </tbody>

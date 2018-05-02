@@ -27,7 +27,7 @@
 <jsp:include page="/WEB-INF/jsp/BasePages/RegBP.jsp"></jsp:include>
 <div class="registration_container border rounded" style="width: 510px; margin: 0 auto;  padding: 10px;" >
     <div class="container">
-        <form onclick="return validateForm()" class="form-horizontal" role="form" action="/frontControllerReg" method="post" name="registration_form" >
+        <form  class="form-horizontal" role="form" action="/frontControllerReg" method="post" name="registration_form" >
             <input type="hidden" name="command" value="registration">
             <h2 style="margin-left: 50px"><fmt:message key="local.button.registration"/> </h2>
             <div class="form-group form-inline">

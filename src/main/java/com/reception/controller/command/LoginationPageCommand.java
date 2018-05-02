@@ -14,8 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.reception.controller.command.RegistrationCommand.*;
-import static com.reception.controller.constant.Constant.RegistrationProperty.FIO_PARAMETER;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
@@ -38,7 +36,7 @@ public class LoginationPageCommand implements Command {
             password = request.getParameter(REQUEST_PARAMETER_PASSWORD);
 
             User user = service.findUserByEmailAndPassword(email, password);
-            if (user != null| !email.equals("")) {
+            if (user != null) {
                 request.getSession().setAttribute(FIO_PARAMETER, user.getLast_name() + " " + user.getFirst_name() + " " + user.getPatronymic());
                 request.getSession().setAttribute(MATH_RESULT_PARAMETER, user.getMathResult());
                 request.getSession().setAttribute(PHYS_RESULT_PARAMETER, user.getPhysResult());
@@ -46,9 +44,7 @@ public class LoginationPageCommand implements Command {
                 request.getSession().setAttribute(SERT_RESULT_PARAMETER, user.getSertResult());
                 request.getSession().setAttribute(USER_ATTRIBUTE_ROLE, user.getRole());
                 if (user.getRole().equals(USER_ATTRIBUTE_NAME)) {
-
                     response.sendRedirect(PAGE_USER);
-
                 }
                 if (user.getRole().equals(ADMIN_ROLE)) {
                     response.sendRedirect(PAGE_ADMIN);

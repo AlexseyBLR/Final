@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.RegistrationProperty.*;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
@@ -30,13 +29,12 @@ public class MechExploatationCommand implements Command {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-//    ME_request   имя таблицы
+    //    ME_request   имя таблицы
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
-
         HttpSession session = request.getSession(true);
+
         String userFIO = String.valueOf(session.getAttribute(FIO_PARAMETER));
         int mathResult = Integer.parseInt(String.valueOf(session.getAttribute(MATH_RESULT_PARAMETER)));
         int langResult = Integer.parseInt(String.valueOf(session.getAttribute(PHYS_RESULT_PARAMETER)));
@@ -52,16 +50,13 @@ public class MechExploatationCommand implements Command {
         } catch (ServiceException e) {
             logger.error("Request error", e);
         }
-        if(result){
+        if (result) {
             session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String(SESSION_ATTRIBUTE_RESULT_SENT));
             response.sendRedirect(PAGE_USER_REQUEST);
 
-        }else {
+        } else {
             response.sendRedirect(PAGE_ERROR);
         }
-
-
-
     }
 
 

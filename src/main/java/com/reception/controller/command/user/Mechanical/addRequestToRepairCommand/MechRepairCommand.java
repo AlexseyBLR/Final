@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.RegistrationProperty.*;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
 

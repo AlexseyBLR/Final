@@ -18,6 +18,12 @@ public class Constant {
 
     public static class WebProperty {
 
+        public final static String FIO_PARAMETER = "userFIO";
+        public final static String MATH_RESULT_PARAMETER = "math";
+        public final static String PHYS_RESULT_PARAMETER = "phys";
+        public final static String LANG_RESULT_PARAMETER = "lang";
+        public final static String SERT_RESULT_PARAMETER = "sert";
+
         public final static String REQUEST_HEADER_NAME = "requests";
 
         public final static String REQUEST_PARAMETER_EMAIL = "email";

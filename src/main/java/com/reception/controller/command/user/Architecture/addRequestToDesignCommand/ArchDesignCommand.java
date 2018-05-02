@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.reception.controller.constant.Constant.RegistrationProperty.*;
 import static com.reception.controller.constant.Constant.WebProperty.*;
 
 
@@ -29,7 +28,6 @@ public class ArchDesignCommand implements Command {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ControllerException {
 
@@ -40,6 +38,7 @@ public class ArchDesignCommand implements Command {
         int langResult = Integer.parseInt(String.valueOf(session.getAttribute(PHYS_RESULT_PARAMETER)));
         int physResult = Integer.parseInt(String.valueOf(session.getAttribute(LANG_RESULT_PARAMETER)));
         int sertResult = Integer.parseInt(String.valueOf(session.getAttribute(SERT_RESULT_PARAMETER)));
+
 
 
         UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.ARCHITECTURE_DESIGN_FACULTY);

@@ -34,11 +34,11 @@ public class ArchBuildingCommand implements Command {
 
 
         HttpSession session = request.getSession(true);
-        String userFIO = (String)session.getAttribute("userFIO");
-        int mathResult = Integer.parseInt(String.valueOf(session.getAttribute("mathResult")));
-        int langResult = Integer.parseInt(String.valueOf(session.getAttribute("physResult")));
-        int physResult = Integer.parseInt(String.valueOf(session.getAttribute("langResult")));
-        int sertResult = Integer.parseInt(String.valueOf(session.getAttribute("sertResult")));
+        String userFIO = String.valueOf(session.getAttribute(FIO_PARAMETER));
+        int mathResult = Integer.parseInt(String.valueOf(session.getAttribute(MATH_RESULT_PARAMETER)));
+        int langResult = Integer.parseInt(String.valueOf(session.getAttribute(PHYS_RESULT_PARAMETER)));
+        int physResult = Integer.parseInt(String.valueOf(session.getAttribute(LANG_RESULT_PARAMETER)));
+        int sertResult = Integer.parseInt(String.valueOf(session.getAttribute(SERT_RESULT_PARAMETER)));
 
 
         UserRequest resultForRequest = new UserRequest(userFIO, mathResult, physResult, langResult, sertResult, Constant.RequestProperty.ARCHITECTURE_BUILDING_FACULTY);
@@ -50,7 +50,7 @@ public class ArchBuildingCommand implements Command {
             logger.error("Request error", e);
         }
         if (result) {
-            session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String("Send"));
+            session.setAttribute(SESSION_ATTRIBUTE_RESULT, new String(SESSION_ATTRIBUTE_RESULT_SENT));
             response.sendRedirect(PAGE_USER_REQUEST);
 
         } else {
