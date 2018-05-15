@@ -48,6 +48,7 @@ public class RegistrationCommand implements Command {
             int langResult = Integer.parseInt(request.getParameter(LANG_RESULT_PARAMETER));
             int sertResult = Integer.parseInt(request.getParameter(SERT_RESULT_PARAMETER));
             String role = USER_ATTRIBUTE_NAME;
+            System.out.println(firstName);
 
             User user = new User(firstName, lastName, patronymic, email, password,
                     phoneNumber, mathResult, physResult, langResult, sertResult, role);

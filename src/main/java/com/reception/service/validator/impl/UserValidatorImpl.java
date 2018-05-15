@@ -4,12 +4,6 @@ import com.reception.controller.constant.Constant;
 import com.reception.entity.User;
 import com.reception.service.validator.CustomerValidator;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.reception.service.validator.CustomerValidator;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -24,9 +18,11 @@ public class UserValidatorImpl extends AbstractValidator implements CustomerVali
 
     private static final String PHONE_NUMBER_REG_EXP = "\\+[1-9]{1}[0-9]{11}";
 
-    private static final String NAME_REG_EXP = "[A-Z]{1}[a-z]+";
+    private static final String NAME_REG_EXP = "[A-Z]{1}[a-z{1,30}]";
 
-    private static final String RESULT_REG_EXP = "^\\d{1,2}|[100]$";
+    private static final String RESULT_REG_EXP = "^\\d{1,2}$|^100$";
+
+    private static final String PASSWORD_REG_EXP = "[A-Za-z0-9]{5,}[^!@#$%^&*]";
 
 
     private static final Pattern PHONE_NUMBER_PATTERN = Pattern.compile(PHONE_NUMBER_REG_EXP);
@@ -36,6 +32,8 @@ public class UserValidatorImpl extends AbstractValidator implements CustomerVali
     private static final Pattern NAME_PATTER = Pattern.compile(NAME_REG_EXP);
 
     private static final Pattern RESULT_PATTER = Pattern.compile(RESULT_REG_EXP);
+
+    private static final Pattern PASSWORD_PATTER = Pattern.compile(PASSWORD_REG_EXP);
 
     private final Map<String, Predicate<User>> dispathcer = new HashMap<>();
 

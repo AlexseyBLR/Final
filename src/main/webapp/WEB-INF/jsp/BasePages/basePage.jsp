@@ -6,19 +6,19 @@
        value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale.language}"
        scope="session"/>
 <fmt:setLocale value="${language}"/>
-<fmt:setBundle basename="local" />
+<fmt:setBundle basename="local"/>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-    <script src="/js/validator.js" type="text/javascript"></script>
+    <script src="/js/loginValidator.js" type="text/javascript"></script>
 
     <c:set var="language"
            value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale.language}"
            scope="session"/>
     <fmt:setLocale value="${language}"/>
-    <fmt:setBundle basename="local" />
+    <fmt:setBundle basename="local"/>
 
     <meta charset="utf-8">
     <title>Bootstrap уроки</title>
@@ -95,11 +95,10 @@
 <body>
 
 
-
 <form class="navbar navbar-inverse ">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" style="font-size: 30px; margin-right: 50px; margin-left: 1px"href="index.jsp">UNIVERSITY</a>
+            <a class="navbar-brand" style="font-size: 30px; margin-right: 50px; margin-left: 1px" href="index.jsp">UNIVERSITY</a>
         </div>
         <div class="collapse navbar-collapse js-navbar">
             <ul class="nav navbar-nav">
@@ -116,9 +115,9 @@
                     <ul class="dropdown-menu">
 
                         <!--ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-                        <li><a href="#" class="faculty"><fmt:message key="local.faculties.mechanical"/></a></li>
-                        <li><a href="#" class="faculty"><fmt:message key="local.faculriest.architecture"/></a></li>
-                        <li><a href="#" class="faculty"><fmt:message key="local.faculties.comScience"/></a></li>
+                        <li><a href="/fac" class="faculty"><fmt:message key="local.faculties.mechanical"/></a></li>
+                        <li><a href="/fac" class="faculty"><fmt:message key="local.faculriest.architecture"/></a></li>
+                        <li><a href="/fac" class="faculty"><fmt:message key="local.faculties.comScience"/></a></li>
                     </ul>
                 </li>
 
@@ -136,8 +135,10 @@
                         <input type="hidden" name="command" value="selectLanguage">
                         <ul class="dropdown-menu" style="width: 10px">
 
-                            <a style="margin-right: 30px;margin-left: 20px; font-size: 20px" class="dropdown-item" href="${requestScope.requestURI}?language=en"><fmt:message key="local.en"/></a>
-                            <a style="font-size: 20px" class="dropdown-item" href="${requestScope.requestURI}?language=ru"><fmt:message key="local.ru"/></a>
+                            <a style="margin-right: 30px;margin-left: 20px; font-size: 20px" class="dropdown-item"
+                               href="${requestScope.requestURI}?language=en"><fmt:message key="local.en"/></a>
+                            <a style="font-size: 20px" class="dropdown-item"
+                               href="${requestScope.requestURI}?language=ru"><fmt:message key="local.ru"/></a>
 
                         </ul>
                     </form>
@@ -148,29 +149,31 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: 220px">
-                        <form method="post" action="FrontController" role="form" name="registration_form">
+                        <form onsubmit="if(validateLogination()) return true; else return false;" method="post" action="FrontController" role="form" name="login_form" >
                             <input type="hidden" name="command" value="logination">
                             <div class="form-group">
                                 <label for="email" class="margin">Email</label>
                                 <input type="text" id="email" autofocus name="email" class="form-control"
                                        style="width: auto; margin-left: 10px"
                                        placeholder="email"/>
-                                <p id="email_error" style="color: red"></p>
+                                <p id="email_error" style="margin-left: 20px; font-size: 13px; color: red"></p>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="margin"><fmt:message key="local.password"/></label>
-                                <input type="password" id="password" autofocus name="password" class="form-control"
+                                <input type="password" id="password" placeholder="Password" autofocus name="password" class="form-control"
                                        style="width: auto; margin-left: 10px"
                                        placeholder="password">
-                                <p id="password_error" style="color: red"></p>
+                                <p id="password_error" style="margin-left: 20px; font-size: 13px; color: red"></p>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" style="margin-left: 10px" value=<fmt:message key="local.button.login"/>>
+                                <input type="submit" class="btn btn-primary" style="margin-left: 10px" value=
+                                <fmt:message key="local.button.login"/>>
                             </div>
                         </form>
                         <form action="FrontController" method="post">
                             <input type="hidden" name="command" value="goToRegistration">
-                            <input type="submit" class="btn btn-primary" style="margin-left: 55px" value=<fmt:message key="local.button.registration"/> >
+                            <input type="submit" class="btn btn-primary" style="margin-left: 55px" value=
+                            <fmt:message key="local.button.registration"/>>
                         </form>
                     </ul>
                 </li>
@@ -193,24 +196,36 @@
         <div class="item active">
             <img src="one.jpg">
             <div class="carousel-caption d-none d-md-block">
-                <h5><fmt:message key="local.message.slider.small"/></h5>
-                <h1><fmt:message key="local.message.slider.BIG"/></h1>
+                <h4 style="text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;"><fmt:message key="local.message.slider.small"/></h4>
+                <h1 style="font-size: 40px"><fmt:message key="local.message.slider.BIG"/></h1>
             </div>
         </div>
 
         <div class="item">
             <img src="two.jpg">
             <div class="carousel-caption d-none d-md-block">
-                <h5><fmt:message key="local.message.slider.secondsm"/></h5>
-                <h1><fmt:message key="local.message.slider.secondBig"/></h1>
+                <h4 style="text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;"><fmt:message key="local.message.slider.secondsm"/></h4>
+                <h1 style="font-size: 40px"><fmt:message key="local.message.slider.secondBig"/></h1>
             </div>
         </div>
 
         <div class="item">
             <img src="three.jpg">
             <div class="carousel-caption d-none d-md-block">
-                <h5><fmt:message key="local.message.slider.thirdS"/></h5>
-                <h1><fmt:message key="local.message.slider.third.big"/></h1>
+                <h4 style="text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;"><fmt:message key="local.message.slider.thirdS"/></h4>
+                <h1 style="font-size: 40px"><fmt:message key="local.message.slider.third.big"/></h1>
             </div>
         </div>
     </div>

@@ -50,7 +50,7 @@ public class LoginationPageCommand implements Command {
                     response.sendRedirect(PAGE_ADMIN);
                 }
             } else {
-                response.sendRedirect("/index.jsp");
+                response.sendRedirect(PAGE_REGISTRATION);
             }
         } catch (ServiceException | IOException e) {
             logger.error("Exception from singIn command", e);

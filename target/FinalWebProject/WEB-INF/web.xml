@@ -28,6 +28,16 @@
 
 
     <servlet>
+        <servlet-name>FrontControllerFac</servlet-name>
+        <jsp-file>/WEB-INF/jsp/BasePages/FacultyInfo.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FrontControllerFac</servlet-name>
+        <url-pattern>/fac</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>FrontControllerRegistration</servlet-name>
         <jsp-file>/WEB-INF/jsp/RegistrationPage.jsp</jsp-file>
     </servlet>
@@ -148,8 +158,40 @@
     </servlet-mapping>
 
 
+    <!--<listener>-->
+        <!--<listener-class>com.reception.listener.SessionListener</listener-class>-->
+    <!--</listener>-->
 
+    <!--<listener>-->
+        <!--<listener-class>com.reception.listener.ServletContextListener</listener-class>-->
+    <!--</listener>-->
 
+    <!--<filter>-->
+        <!--<filter-name>AdminUrlFilter</filter-name>-->
+        <!--<filter-class>com.reception.filter.AdminUrlFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>AdminUrlFilter</filter-name>-->
+        <!--<servlet-name>FrontController</servlet-name>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+        <!--<filter-name>EncodingFilter</filter-name>-->
+        <!--<filter-class>com.reception.filter.EncodingFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>EncodingFilter</filter-name>-->
+        <!--<servlet-name>FrontController</servlet-name>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+        <!--<filter-name>EncodingMuleiDate</filter-name>-->
+        <!--<filter-class>com.reception.filter.MultiDateFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>EncodingMuleiDate</filter-name>-->
+        <!--<servlet-name>FrontController</servlet-name>-->
+    <!--</filter-mapping>-->
 
 
 

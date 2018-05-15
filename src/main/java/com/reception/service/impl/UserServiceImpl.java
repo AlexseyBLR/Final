@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean saveCustomer(User user) throws ServiceException {
-        if (!validator.validate(user)) {
+        if (validator.validate(user)) {
             throw new ValidatorException("attempt to save a incorrect customer");
         }
         try {

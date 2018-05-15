@@ -1,4 +1,5 @@
-<%@ page pageEncoding="UTF-8" %>
+<%@page contentType='text/html;charset=UTF-8' %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
@@ -12,8 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <script src="/js/validator.js" type="text/javascript"></script>
+    <script src="/js/formValidator.js" type="text/javascript"></script>
 
 
     <meta charset="utf-8">
@@ -27,8 +27,9 @@
 <jsp:include page="/WEB-INF/jsp/BasePages/RegBP.jsp"></jsp:include>
 <div class="registration_container border rounded" style="width: 510px; margin: 0 auto;  padding: 10px;" >
     <div class="container">
-        <form  class="form-horizontal" role="form" action="/frontControllerReg" method="post" name="registration_form" >
+        <form onsubmit="if(validateFormOnRegistration()) return true; else return false;"  class="form-horizontal" role="form" action="/frontControllerReg" method="post" name="registration_form" >
             <input type="hidden" name="command" value="registration">
+            <h4><fmt:message key="local.reg.small"/> </h4>
             <h2 style="margin-left: 50px"><fmt:message key="local.button.registration"/> </h2>
             <div class="form-group form-inline">
                 <label for="firstName" class="col-sm-3 control-label"><fmt:message key="local.name"/> </label>
